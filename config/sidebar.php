@@ -6,7 +6,7 @@
         <!-- <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div> -->
-        <div class="sidebar-brand-text mx-3">BUDGETING <sup>SCG</sup></div>
+        <div class="sidebar-brand-text mx-3">P2H SURVEY <sup>SCG</sup></div>
         <!-- <img src="<?= $base_url; ?>assets/img/Logo Sebuku.png" width="120" height="110"> -->
     </a>
 
