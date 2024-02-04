@@ -48,7 +48,7 @@
 
 
     <!-- DataTales Example -->
-    <div class="container mt-5">
+    <div class="container">
 
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
