@@ -190,16 +190,16 @@
                             <tr>
                                 <td colspan="4"><b><u>
                                             <h4>
-                                                <font color='green'>Total Station</font>
+                                                <font color='green'>Reciever GR5</font>
                                             </h4>
                                         </u></b></td>
                             </tr>
 
-                            <td><label for="nik">1. Box Alat</label></td>
+                            <td><label for="nik">1. Body Reciever</label></td>
 
-                            <td align="center"><input type="radio" name="box_alat" value="Layak " required /></td>
+                            <td align="center"><input type="radio" name="b_reciever" value="Layak " required /></td>
 
-                            <td align="center"><input type="radio" name="box_alat" value="Tidak Layak / " /></td>
+                            <td align="center"><input type="radio" name="b_reciever" value="Tidak Layak / " /></td>
 
                             <td align="center"><input class="form-control" type="text" name="ket1" /></td>
 
