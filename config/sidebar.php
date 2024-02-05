@@ -29,62 +29,7 @@
     </div>
     <?php if ($_SESSION['level'] == 'admin' || $_SESSION['level'] == 'user') : ?>
         <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item <?= isset($master) ? 'active' : ''; ?>">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#master" aria-expanded="true" aria-controls="master">
-                <i class="fas fa-fw fa-folder"></i>
-                <span>Budget Departemen</span>
-            </a>
-            <div id="master" class="collapse <?= isset($master) ? 'show' : ''; ?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <!-- <a class="collapse-item <?= isset($merek) ? 'active' : ''; ?>" href="?merek">Perusahaan</a> -->
-                    <!-- <a class="collapse-item <?= isset($kategori) ? 'active' : ''; ?>" href="?kategori">Kategori</a> -->
 
-                    <?php if ($_SESSION['username'] == 'PRODEV' || $_SESSION['level'] == 'admin') : ?>
-                        <a class="collapse-item <?= isset($prodev) ? 'active' : ''; ?>" href="?prodev">PRODEV</a>
-                    <?php endif; ?>
-
-                    <?php if ($_SESSION['username'] == 'CPP' || $_SESSION['level'] == 'admin') : ?>
-                        <a class="collapse-item <?= isset($cpp) ? 'active' : ''; ?>" href="?cpp">CPP</a>
-                    <?php endif; ?>
-
-                    <?php if ($_SESSION['username'] == 'EA' || $_SESSION['level'] == 'admin') : ?>
-                        <a class="collapse-item <?= isset($ea) ? 'active' : ''; ?>" href="?ea">EA</a>
-                    <?php endif; ?>
-
-                    <?php if ($_SESSION['username'] == 'HSE' || $_SESSION['level'] == 'admin') : ?>
-                        <a class="collapse-item <?= isset($hse) ? 'active' : ''; ?>" href="?hse">HSE</a>
-                    <?php endif; ?>
-
-                    <?php if ($_SESSION['username'] == 'ITC' || $_SESSION['level'] == 'admin') : ?>
-                        <a class="collapse-item <?= isset($itc) ? 'active' : ''; ?>" href="?itc">ITC</a>
-                    <?php endif; ?>
-
-                    <?php if ($_SESSION['username'] == 'MEP' || $_SESSION['level'] == 'admin') : ?>
-                        <a class="collapse-item <?= isset($mep) ? 'active' : ''; ?>" href="?mep">MEP</a>
-                    <?php endif; ?>
-
-                    <?php if ($_SESSION['username'] == 'SCM' || $_SESSION['level'] == 'admin') : ?>
-                        <a class="collapse-item <?= isset($scm) ? 'active' : ''; ?>" href="?scm">SCM</a>
-                    <?php endif; ?>
-
-                    <?php if ($_SESSION['username'] == 'SHIP' || $_SESSION['level'] == 'admin') : ?>
-                        <a class="collapse-item <?= isset($ship) ? 'active' : ''; ?>" href="?ship">SHIP</a>
-                    <?php endif; ?>
-
-                    <?php if ($_SESSION['username'] == 'SURVEY' || $_SESSION['level'] == 'admin') : ?>
-                        <a class="collapse-item <?= isset($survey) ? 'active' : ''; ?>" href="?survey">SURVEY</a>
-                    <?php endif; ?>
-
-                    <!-- menu untuk super admin -->
-                    <?php if ($_SESSION['level'] == 'admin') : ?>
-                        <a class="collapse-item <?= isset($pengguna) ? 'active' : ''; ?>" href="?pengguna">Pengguna</a>
-                    <?php endif; ?>
-                    <!--  -->
-                    <a class="collapse-item <?= isset($split) ? 'active' : ''; ?>" href="?split">Split Budget</a>
-
-                </div>
-            </div>
-        </li>
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item <?= isset($transaksi) ? 'active' : ''; ?>">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#transaksi" aria-expanded="true" aria-controls="transaksi">
@@ -94,8 +39,8 @@
             <div id="transaksi" class="collapse <?= isset($transaksi) ? 'show' : ''; ?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <!-- <a class="collapse-item <?= isset($barang_masuk) ? 'active' : ''; ?>" href="?barang_masuk">Barang Masuk</a> -->
-                    <a class="collapse-item <?= isset($trnsk_prodev) ? 'active' : ''; ?>" href="?trnsk_prodev">Total Station</a>
-                    <a class="collapse-item <?= isset($trnsk_stok) ? 'active' : ''; ?>" href="?trnsk_stok">GPS</a>
+                    <a class="collapse-item <?= isset($total_station) ? 'active' : ''; ?>" href="?total_station">Total Station</a>
+                    <a class="collapse-item <?= isset($gps) ? 'active' : ''; ?>" href="?gps">GPS</a>
                     <a class="collapse-item <?= isset($trnsk_split) ? 'active' : ''; ?>" href="?trnsk_split">Drone</a>
                 </div>
             </div>
@@ -120,12 +65,12 @@
         <li class="nav-item <?= isset($log_transaksi) ? 'active' : ''; ?>">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#log_transaksi" aria-expanded="true" aria-controls="log_transaksi">
                 <i class="fas fa-fw fa-folder"></i>
-                <span>Log Transaksi</span>
+                <span>Log P2H</span>
             </a>
             <div id="log_transaksi" class="collapse <?= isset($log_transaksi) ? 'show' : ''; ?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item <?= isset($trnsk_berhasil) ? 'active' : ''; ?>" href="?trnsk_berhasil">Log Transaksi Berhasil</a>
-                    <a class="collapse-item <?= isset($trnsk_gagal) ? 'active' : ''; ?>" href="?trnsk_gagal">Log Transaksi Gagal</a>
+                    <a class="collapse-item <?= isset($trnsk_berhasil) ? 'active' : ''; ?>" href="?trnsk_berhasil">Log di Approve</a>
+                    <a class="collapse-item <?= isset($trnsk_gagal) ? 'active' : ''; ?>" href="?trnsk_gagal">Log Gagal</a>
                 </div>
             </div>
         </li>

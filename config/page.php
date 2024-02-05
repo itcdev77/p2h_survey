@@ -71,12 +71,12 @@ else if (isset($_GET['split'])) {
     $views = 'views/master/split.php';
 }
 //Transaksi
-else if (isset($_GET['trnsk_prodev'])) {
-    $transaksi = $trnsk_prodev = true;
-    $views = 'views/transaksi/trnsk_prodev.php';
-} else if (isset($_GET['trnsk_stok'])) {
-    $transaksi = $trnsk_stok = true;
-    $views = 'views/transaksi/trnsk_stok.php';
+else if (isset($_GET['total_station'])) {
+    $transaksi = $total_station = true;
+    $views = 'views/transaksi/total_station.php';
+} else if (isset($_GET['gps'])) {
+    $transaksi = $gps = true;
+    $views = 'views/transaksi/gps.php';
 } else if (isset($_GET['trnsk_split'])) {
     $transaksi = $trnsk_split = true;
     $views = 'views/transaksi/trnsk_split.php';
