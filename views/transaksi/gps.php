@@ -205,297 +205,114 @@
 
                             </tr>
 
-                            <tr>
-                                <td>
-                                    <h5 style="color: black;">Battery:</h5>
-                                </td>
                             </tr>
 
-                            <tr>
+                            <td><label for="nik">2. LED Jaringan</label></td>
 
-                                <td><label for="nik">2. Internal Battery</label></td>
+                            <td align="center"><input type="radio" name="led_jaringan" value="Layak " required /></td>
 
-                                <td align="center"><input type="radio" name="internal_battery" value="Layak " required /></td>
+                            <td align="center"><input type="radio" name="led_jaringan" value="Tidak Layak / " /></td>
 
-                                <td align="center"><input type="radio" name="internal_battery" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket2" /></td>
+                            <td align="center"><input class="form-control" type="text" name="ket2" /></td>
 
                             </tr>
 
-                            <tr>
+                            </tr>
 
-                                <td><label for="nik">3. Charger Battery</label></td>
+                            <td><label for="nik">3. Radio Antena</label></td>
 
-                                <td align="center"><input type="radio" name="charger_battery" value="Layak " required /></td>
+                            <td align="center"><input type="radio" name="r_antena" value="Layak " required /></td>
 
-                                <td align="center"><input type="radio" name="charger_battery" value="Tidak Layak / " /></td>
+                            <td align="center"><input type="radio" name="r_antena" value="Tidak Layak / " /></td>
 
-                                <td align="center"><input class="form-control" type="text" name="ket3" /></td>
+                            <td align="center"><input class="form-control" type="text" name="ket3" /></td>
 
                             </tr>
 
-                            <tr>
-                                <td>
-                                    <h5 style="color: black;">Sumbuh Putar:</h5>
-                                </td>
                             </tr>
 
-                            <tr>
+                            <td><label for="nik">4. Extension</label></td>
 
-                                <td><label for="nik">4. Vertikal</label></td>
+                            <td align="center"><input type="radio" name="extension" value="Layak " required /></td>
 
-                                <td align="center"><input type="radio" name="sumbuh_vertikal" value="Layak " required /></td>
+                            <td align="center"><input type="radio" name="extension" value="Tidak Layak / " /></td>
 
-                                <td align="center"><input type="radio" name="sumbuh_vertikal" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket4" /></td>
+                            <td align="center"><input class="form-control" type="text" name="ket4" /></td>
 
                             </tr>
+                            </tr>
 
-                            <tr>
+                            <td><label for="nik">5. Internal Battery</label></td>
 
-                                <td><label for="nik">5. Horizontal</label></td>
+                            <td align="center"><input type="radio" name="i_battery" value="Layak " required /></td>
 
-                                <td align="center"><input type="radio" name="sumbuh_horizontal" value="Layak " required /></td>
+                            <td align="center"><input type="radio" name="i_battery" value="Tidak Layak / " /></td>
 
-                                <td align="center"><input type="radio" name="sumbuh_horizontal" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket5" /></td>
+                            <td align="center"><input class="form-control" type="text" name="ket5" /></td>
 
                             </tr>
 
-                            <tr>
-                                <td>
-                                    <h5 style="color: black;">Lensa:</h5>
-                                </td>
                             </tr>
 
-                            <tr>
+                            <td><label for="nik">6. Charger Battery</label></td>
 
-                                <td><label for="nik">6. Obyektif</label></td>
+                            <td align="center"><input type="radio" name="c_battery" value="Layak " required /></td>
 
-                                <td align="center"><input type="radio" name="lensa_obyektif" value="Layak " required /></td>
+                            <td align="center"><input type="radio" name="c_battery" value="Tidak Layak / " /></td>
 
-                                <td align="center"><input type="radio" name="lensa_obyektif" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket6" /></td>
-
-                            </tr>
-
-                            <tr>
-
-                                <td><label for="nik">7. Okuler</label></td>
-
-                                <td align="center"><input type="radio" name="lensa_okuler" value="Layak " required /></td>
-
-                                <td align="center"><input type="radio" name="lensa_okuler" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket7" /></td>
+                            <td align="center"><input class="form-control" type="text" name="ket6" /></td>
 
                             </tr>
 
                             <tr>
                                 <td>
-                                    <h5 style="color: black;">------------</h5>
+                                    <h5 style="color: black;">Tombol:</h5>
                                 </td>
                             </tr>
 
-                            <tr>
-
-                                <td><label for="nik">8. Pengatur Fokus</label></td>
-
-                                <td align="center"><input type="radio" name="p_fokus" value="Layak " required /></td>
-
-                                <td align="center"><input type="radio" name="p_fokus" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket8" /></td>
 
                             </tr>
 
-                            <tr>
+                            <td><label for="nik">7. Power</label></td>
 
-                                <td><label for="nik">9. Clamp Vert & Horiz</label></td>
+                            <td align="center"><input type="radio" name="t_power" value="Layak " required /></td>
 
-                                <td align="center"><input type="radio" name="c_v&h" value="Layak " required /></td>
+                            <td align="center"><input type="radio" name="t_power" value="Tidak Layak / " /></td>
 
-                                <td align="center"><input type="radio" name="c_v&h" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket9" /></td>
+                            <td align="center"><input class="form-control" type="text" name="ket7" /></td>
 
                             </tr>
-                            <tr>
 
-                                <td><label for="nik">10. Penggerak halus Vert & Horiz</label></td>
+                            </tr>
 
-                                <td align="center"><input type="radio" name="ph_v&h" value="Layak " required /></td>
+                            <td><label for="nik">8. Port Battery</label></td>
 
-                                <td align="center"><input type="radio" name="ph_v&h" value="Tidak Layak / " /></td>
+                            <td align="center"><input type="radio" name="p_battery" value="Layak " required /></td>
 
-                                <td align="center"><input class="form-control" type="text" name="ket10" /></td>
+                            <td align="center"><input type="radio" name="p_battery" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket8" /></td>
+
 
                             </tr>
 
                             <tr>
                                 <td>
-                                    <h5 style="color: black;">Sistem Centering:</h5>
+                                    <h5 style="color: black;">Port:</h5>
                                 </td>
                             </tr>
 
-                            <tr>
-
-                                <td><label for="nik">11. Lensa</label></td>
-
-                                <td align="center"><input type="radio" name="sc_lensa" value="Layak " required /></td>
-
-                                <td align="center"><input type="radio" name="sc_lensa" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket11" /></td>
-
-                            </tr>
-                            <tr>
-
-                                <td><label for="nik">12. Pengatur Fokus</label></td>
-
-                                <td align="center"><input type="radio" name="sc_pf" value="Layak " required /></td>
-
-                                <td align="center"><input type="radio" name="sc_pf" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket12" /></td>
-
                             </tr>
 
-                            <tr>
-                                <td>
-                                    <h5 style="color: black;">Sistem Levelling:</h5>
-                                </td>
-                            </tr>
+                            <td><label for="nik">9. Tutup Port USB</label></td>
 
-                            <tr>
+                            <td align="center"><input type="radio" name="t_port_usb" value="Layak " required /></td>
 
-                                <td><label for="nik">13. Nivo Tabung(Plate Level)</label></td>
+                            <td align="center"><input type="radio" name="t_port_usb" value="Tidak Layak / " /></td>
 
-                                <td align="center"><input type="radio" name="nt_pl" value="Layak " required /></td>
-
-                                <td align="center"><input type="radio" name="nt_pl" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket13" /></td>
+                            <td align="center"><input class="form-control" type="text" name="ket9" /></td>
 
                             </tr>
-                            <tr>
-
-                                <td><label for="nik">14. Nivo Bulat(Circular Level)</label></td>
-
-                                <td align="center"><input type="radio" name="nb_cl" value="Layak " required /></td>
-
-                                <td align="center"><input type="radio" name="nb_cl" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket14" /></td>
-
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <h5 style="color: black;">------------</h5>
-                                </td>
-                            </tr>
-
-                            <tr>
-
-                                <td><label for="nik">14. Sekrup ABC</label></td>
-
-                                <td align="center"><input type="radio" name="s_abc" value="Layak " required /></td>
-
-                                <td align="center"><input type="radio" name="s_abc" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket14" /></td>
-
-                            </tr>
-                            <tr>
-
-                                <td><label for="nik">15. Tombol - Tombol Keypad</label></td>
-
-                                <td align="center"><input type="radio" name="t_keypad" value="Layak " required /></td>
-
-                                <td align="center"><input type="radio" name="t_keypad" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket15" /></td>
-
-                            </tr>
-                            <tr>
-
-                                <td><label for="nik">16. Laser</label></td>
-
-                                <td align="center"><input type="radio" name="laser" value="Layak " required /></td>
-
-                                <td align="center"><input type="radio" name="laser" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket16" /></td>
-
-                            </tr>
-                            <tr>
-
-                                <td><label for="nik">17. Meteran Roll</label></td>
-
-                                <td align="center"><input type="radio" name="m_roll" value="Layak " required /></td>
-
-                                <td align="center"><input type="radio" name="m_roll" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket17" /></td>
-
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <h5 style="color: black;">------------</h5>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="color: green;">
-                                    <label for="nik"><b>18. Tipod(Statif)</b></label>
-                                </td>
-
-                                <td align="center"><input type="radio" name="t_statif" value="Layak " required /></td>
-
-                                <td align="center"><input type="radio" name="t_statif" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket18" /></td>
-                            </tr>
-                            <tr>
-                                <td style="color: green;">
-                                    <label for="nik"><b>19. Tribrach APS</b></label>
-                                </td>
-
-                                <td align="center"><input type="radio" name="t_aps" value="Layak " required /></td>
-
-                                <td align="center"><input type="radio" name="t_aps" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket19" /></td>
-                            </tr>
-                            <tr>
-                                <td style="color: green;">
-                                    <label for="nik"><b>20. Stick (Tongkat Pogo)</b></label>
-                                </td>
-
-                                <td align="center"><input type="radio" name="stick_pogo" value="Layak " required /></td>
-
-                                <td align="center"><input type="radio" name="stick_pogo" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket20" /></td>
-                            </tr>
-                            <tr>
-                                <td style="color: green;">
-                                    <label for="nik"><b>21. Prisma Topo</b></label>
-                                </td>
-
-                                <td align="center"><input type="radio" name="prisma_topo" value="Layak " required /></td>
-
-                                <td align="center"><input type="radio" name="prisma_topo" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket21" /></td>
-                            </tr>
-
 
 
                         </table>
