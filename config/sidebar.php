@@ -41,27 +41,27 @@
                     <!-- <a class="collapse-item <?= isset($barang_masuk) ? 'active' : ''; ?>" href="?barang_masuk">Barang Masuk</a> -->
                     <a class="collapse-item <?= isset($total_station) ? 'active' : ''; ?>" href="?total_station">Total Station</a>
                     <a class="collapse-item <?= isset($gps) ? 'active' : ''; ?>" href="?gps">GPS</a>
-                    <a class="collapse-item <?= isset($trnsk_split) ? 'active' : ''; ?>" href="?trnsk_split">Drone</a>
+                    <a class="collapse-item <?= isset($drone) ? 'active' : ''; ?>" href="?drone">Drone</a>
+                    <a class="collapse-item <?= isset($drone_rtk) ? 'active' : ''; ?>" href="?drone_rtk">Drone RTK</a>
                 </div>
             </div>
         </li>
-        <!-- Nav Item - Pages Collapse Menu -->
-        <!-- <li class="nav-item <?= isset($laporan) ? 'active' : ''; ?>">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#laporan" aria-expanded="true" aria-controls="laporan">
+
+        <li class="nav-item <?= isset($report) ? 'active' : ''; ?>">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#report" aria-expanded="true" aria-controls="report">
                 <i class="fas fa-fw fa-folder"></i>
-                <span>Laporan</span>
+                <span>Rreport Table</span>
             </a>
-            <div id="laporan" class="collapse <?= isset($laporan) ? 'show' : ''; ?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div id="report" class="collapse <?= isset($report) ? 'show' : ''; ?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item <?= isset($lap_barang_masuk) ? 'active' : ''; ?>" href="?lap_barang_masuk">Laporan
-                        Barang Masuk</a>
-                    <a class="collapse-item <?= isset($lap_barang_keluar) ? 'active' : ''; ?>" href="?lap_barang_keluar">Laporan
-                        Barang Keluar</a>
-                    <a class="collapse-item <?= isset($lap_stok_barang) ? 'active' : ''; ?>" href="<?= base_url(); ?>process/lap_stok_barang.php" target="_blank">Laporan Stok
-                        Barang</a>
+                    <a class="collapse-item <?= isset($total_station) ? 'active' : ''; ?>" href="?trnsk_berhasil">Report Total Station</a>
+                    <a class="collapse-item <?= isset($drone) ? 'active' : ''; ?>" href="?drone">Report Drone</a>
+                    <a class="collapse-item <?= isset($drone_rtk) ? 'active' : ''; ?>" href="?drone_rtk">Report Drone RTK</a>
+                    <a class="collapse-item <?= isset($gps) ? 'active' : ''; ?>" href="?gps">GPS Geodetic</a>
                 </div>
             </div>
-        </li> -->
+        </li>
+
         <li class="nav-item <?= isset($log_transaksi) ? 'active' : ''; ?>">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#log_transaksi" aria-expanded="true" aria-controls="log_transaksi">
                 <i class="fas fa-fw fa-folder"></i>

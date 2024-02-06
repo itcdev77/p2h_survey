@@ -91,7 +91,7 @@
 
                         <label for="dep">Pilih Total Station<font color="Red">*</font> : </label>
 
-                        <select class="form-control" name="nama_alat" required />
+                        <select class="form-control" name="pilih_total_station" required />
 
                         <option disabled selected value>-Pilih-</option>
 

@@ -77,9 +77,12 @@ else if (isset($_GET['total_station'])) {
 } else if (isset($_GET['gps'])) {
     $transaksi = $gps = true;
     $views = 'views/transaksi/gps.php';
-} else if (isset($_GET['trnsk_split'])) {
-    $transaksi = $trnsk_split = true;
-    $views = 'views/transaksi/trnsk_split.php';
+} else if (isset($_GET['drone'])) {
+    $transaksi = $drone = true;
+    $views = 'views/transaksi/drone.php';
+} else if (isset($_GET['drone_rtk'])) {
+    $transaksi = $drone_rtk = true;
+    $views = 'views/transaksi/drone_rtk.php';
 }
 // 
 
@@ -90,6 +93,13 @@ else if (isset($_GET['trnsk_berhasil'])) {
 } else if (isset($_GET['trnsk_gagal'])) {
     $log_transaksi = $trnsk_gagal = true;
     $views = 'views/log_transaksi/trnsk_gagal.php';
+}
+// 
+
+// Log report P2H...
+else if (isset($_GET['trnsk_berhasil'])) {
+    $report = $trnsk_berhasil = true;
+    $views = 'views/report/trnsk_berhasil.php';
 }
 // 
 

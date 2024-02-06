@@ -58,133 +58,621 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
-    <!-- Page Heading -->
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Detail Transaksi Split Budget <?= strtoupper($_SESSION['fullname']); ?></h1>
-    </div>
+
     <!-- DataTales Example -->
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <!-- <a href="#" class="btn btn-primary btn-icon-split btn-sm" data-toggle="modal" data-target="#barang_keluar">
-                <span class="icon text-white-50">
-                    <i class="fas fa-plus"></i>
-                </span>
-                <span class="text">Tambah</span>
-            </a> -->
-            <!-- <a href="<?= base_url(); ?>process/cetak_barang_keluar.php" target="_blank" class="btn btn-info btn-icon-split btn-sm float-right">
-                <span class="icon text-white-50">
-                    <i class="fas fa-print"></i>
-                </span>
-                <span class="text">Cetak</span>
-            </a> -->
+    <div class="container">
+
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">FORM P2H DRONE</h1>
         </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th width="10">NO</th>
-                            <th width="100">KODE 1</th>
-                            <th width="100">KODE 2</th>
-                            <th>WAKTU TRANSAKSI</th>
-                            <th>DEPARTEMEN</th>
-                            <th>DESKRIPSI 1</th>
-                            <th>DESKRIPSI 2</th>
-                            <th>KETERANGAN</th>
-                            <th>TRANSAKSI</th>
-                            <th width="10" class="text-center">ACTION</th>
 
-                            <!-- <?php if ($_SESSION['level'] == 'admin') : ?>
-                            <?php endif; ?> -->
+        <div class="row">
 
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        $n = 1;
-                        // $query = mysqli_query($con, "SELECT x.*,x1.keterangan,x2.nama_kategori FROM trnsk_prodev x JOIN merek x1 ON x1.idmerek=x.merek_id JOIN kategori x2 ON x2.idkategori=x.kategori_id ORDER BY x.idbarang DESC") or die(mysqli_error($con));
-                        $query = mysqli_query($con, "SELECT * FROM trnsk_prodev  ORDER BY idbarang ASC") or die(mysqli_error($con));
+            <div class="col-md-6">
 
-                        if (mysqli_num_rows($query) > 0) {
-                            while ($row = mysqli_fetch_array($query)) :
+                <p>Sebuku Coal Group (Pemeliharaan dan Pemeriksaan Harian)</p>
 
-                                //rumus untuk melihat selisih stok keluar..
-                                // $stokAwal = $row['stok_upd'];
-                                // $stokKurang = $row['stok'];
-                                // $selisihStok = $stokAwal - $stokKurang;
+                <form class="formcoba" action="" method="POST" enctype="multipart/form-data">
 
-                                // Tambahkan kondisi untuk menentukan jenis transaksi yang ingin ditampilkan
-                                $jenis_transaksi = "split"; // Ganti dengan "price" jika ingin menampilkan transaksi price
-                                if ($row['jenis_trnsk'] == $jenis_transaksi && $row['departemen'] == $_SESSION['fullname'] || $_SESSION['level'] == 'admin' && $row['jenis_trnsk'] != 'price' && $row['jenis_trnsk'] != 'stok') :
-                        ?>
-                                    <tr>
-                                        <td><?= $n++ ?></td>
-                                        <td><a href="#detailModal2" data-toggle="modal" onclick="submit(<?= $row['idbarang']; ?>)"><?= $row['kode_budget']; ?></a></td>
+                    <div class="form-group">
 
-                                        <td><?= $row['kode_budget2']; ?></td>
-                                        <td><?= $row['waktu_trnsk']; ?></td>
-                                        <td><?= $row['departemen']; ?></td>
-                                        <td><?= $row['deskripsi']; ?></td>
-                                        <td><?= $row['deskripsi2']; ?></td>
-                                        <td><?= $row['ket']; ?></td>
-                                        <td><?= $row['jenis_trnsk']; ?></td>
+                        <label for="text">Nama<font color="Red">*</font></label>
 
-                                        <!-- approval system -->
+                        <input class="form-control" type="text" name="nama" value="" readonly required />
 
-                                        <?php if ($row['status'] == 'approved' && $_SESSION['level'] != 'admin') : ?>
+                    </div>
 
-                                            <!-- action untuk display detail transaksi -->
-                                            <td class="text-center"><a href="#detailModal" data-toggle="modal" onclick="submit(<?= $row['idbarang']; ?>)" class="btn btn-sm btn-circle btn-primary"><i class="fas fa-edit"></i></a> <span class="text-primary">Approved</span></td>
+                    <div class="form-group">
 
-                                        <?php endif; ?>
+                        <label for="text">Tanggal<font color="Red">*</font></label>
 
-                                        <!-- status ketika sudah di approve -->
-                                        <?php if ($row['status'] == 'approved' && $_SESSION['level'] == 'admin') : ?>
+                        <input class="form-control" type="datetime-local" name="tanggal" placeholder="Jawaban Anda" required />
 
-                                            <!-- action untuk display detail transaksi -->
-                                            <td class="text-center" style="color: #65B741;"><i class="fas fa-check"></i></td>
+                    </div>
 
-                                        <?php endif; ?>
-                                        <!--  -->
-                                        
-                                        <!-- status untuk user ketika belum ada action  dari FA -->
-                                        <?php if ($row['status'] == NULL && $_SESSION['level'] != 'admin') : ?>
+                    <div class="form-group">
 
-                                            <td class="text-center" style="color: orange;"><i class="fas fa-clock"></i> Pending</td>
+                        <label for="text">Lokasi Kerja<font color="Red">*</font></label>
 
-                                        <?php endif; ?>
-                                        <!--  -->
-                                        
-                                        <!-- action ketika status masih pending dan approval untuk admin -->
-                                        <?php if ($row['status'] == NULL && $_SESSION['level'] == 'admin') : ?>
+                        <input class="form-control" type="text" name="lokasi_kerja" placeholder="Jawaban Anda" required />
 
-                                          <td class="text-center"><a class="btn btn-sm btn-circle btn-primary" href="#approve_split" data-toggle="modal" onclick="submit(<?= $row['idbarang']; ?>)"><i class="fas fa-edit"></i></a></td>
+                    </div>
 
-                                        <?php endif; ?>
+                    <div class="form-group">
 
-                                        <!-- info yang akan muncul ketika transaksi gagal -->
-                                        <?php if ($row['status'] == 'gagal') : ?>
+                        <label for="dep">Nama Drone<font color="Red">*</font> : </label>
 
-                                            <td class="text-center" style="color: red;"><i class="fas fa-times"></i> Di Tolak</td>
+                        <select class="form-control" name="pilih_drone" required />
 
-                                        <?php endif; ?>
+                        <option disabled selected value>-Pilih-</option>
+
+                        <option>DJI Mavic 3 Enterprise - M3E</option>
+
+                        <option>Mavic 2 Pro</option>
 
 
-                                    </tr>
-                        <?php
-                                endif;
-                            endwhile;
-                        } else {
-                            echo '<tr><td class="text-center" colspan="7">Belum Ada Transaksi Yang Terjadi</td></tr>';
-                        }
-                        ?>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="text">S/N Alat<font color="Red">*</font></label>
+
+                        <input class="form-control" type="text" name="no_seri" placeholder="Jawaban Anda" required />
+
+                    </div>
 
 
+                    <div class="form-group">
 
-                    </tbody>
-                </table>
+                        <label for="nik">Kondisi Alat<font color="Red">*</font> :</label>
+
+                        <table class="table">
+
+                            <tr valign="middle">
+
+                                <th></th>
+
+                                <th>Layak</th>
+
+                                <th>Tidak<br>Layak</th>
+
+                                <th>Keterangan</th>
+
+                            </tr>
+
+                            <tr>
+                                <td colspan="4"><b><u>
+                                            <h4>
+                                                <font color='green'>Remote Control</font>
+                                            </h4>
+                                        </u></b></td>
+                            </tr>
+
+                            <td><label for="nik">1. Antena</label></td>
+
+                            <td align="center"><input type="radio" name="antena_drone" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="antena_drone" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket1" /></td>
+
+                            </tr>
+
+                            </tr>
+
+                            <td><label for="nik">2. Penyanggan Ponsel</label></td>
+
+                            <td align="center"><input type="radio" name="penyangga_ponsel" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="penyangga_ponsel" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket2" /></td>
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h5 style="color: black;">Tuas Kendali:</h5>
+                                </td>
+                            </tr>
+
+                            </tr>
+
+                            <td><label for="nik">3. Tuas Kendali</label></td>
+
+                            <td align="center"><input type="radio" name="tuas_kendali" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="tuas_kendali" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket3" /></td>
+
+                            </tr>
+
+                            </tr>
+
+                            <td><label for="nik">4. Tuas Kanan</label></td>
+
+                            <td align="center"><input type="radio" name="tuas_kanan" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="tuas_kanan" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket4" /></td>
+
+                            </tr>
+                            </tr>
+
+                            <td><label for="nik">5. Tuas Kiri</label></td>
+
+                            <td align="center"><input type="radio" name="tuas_kiri" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="tuas_kiri" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket5" /></td>
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h5 style="color: black;">LED:</h5>
+                                </td>
+                            </tr>
+
+                            </tr>
+
+                            <td><label for="nik">6. Status LED & Daya Baterai</label></td>
+
+                            <td align="center"><input type="radio" name="stts_led" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="stts_led" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket6" /></td>
+
+                            </tr>
+
+                            </tr>
+
+                            <td><label for="nik">7. LED Rturn to Home (RTH)</label></td>
+
+                            <td align="center"><input type="radio" name="led_rth" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="led_rth" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket7" /></td>
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h5 style="color: black;">Tombol:</h5>
+                                </td>
+                            </tr>
+
+                            </tr>
+
+                            <td><label for="nik">8. Power</label></td>
+
+                            <td align="center"><input type="radio" name="t_power" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="t_power" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket8" /></td>
+
+
+                            </tr>
+
+                            </tr>
+
+                            <td><label for="nik">9. Rerutn to Home (RTH)</label></td>
+
+                            <td align="center"><input type="radio" name="t_rth" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="t_rth" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket9" /></td>
+
+                            </tr>
+
+                            <td><label for="nik">10. Prekam Vidio</label></td>
+
+                            <td align="center"><input type="radio" name="t_perekan_vidio" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="t_perekan_vidio" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket10" /></td>
+
+                            </tr>
+
+                            </tr>
+
+                            <td><label for="nik">11. Shutter/Pengambil Foto</label></td>
+
+                            <td align="center"><input type="radio" name="shutter" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="shutter" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket11" /></td>
+
+                            </tr>
+
+                            </tr>
+
+                            <td><label for="nik">12. Mode Penerbangan</label></td>
+
+                            <td align="center"><input type="radio" name="m_penerbangan" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="m_penerbangan" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket12" /></td>
+
+                            </tr>
+                            </tr>
+
+                            <td><label for="nik">13. Penghenti Mode Terbang</label></td>
+
+                            <td align="center"><input type="radio" name="pmt" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="pmt" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket13" /></td>
+
+                            </tr>
+
+                            </tr>
+
+                            <td><label for="nik">14. Pengaturan Kamera</label></td>
+
+                            <td align="center"><input type="radio" name="p_kamera" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="p_kamera" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket14" /></td>
+
+                            </tr>
+                            </tr>
+
+                            <td><label for="nik">15. Pengaturan Kemiringan</label></td>
+
+                            <td align="center"><input type="radio" name="p_kemiringan" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="p_kemiringan" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket15" /></td>
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h5 style="color: black;">Port:</h5>
+                                </td>
+                            </tr>
+
+
+                            </tr>
+
+                            <td><label for="nik">16. Mikro USB</label></td>
+
+                            <td align="center"><input type="radio" name="mikro_usb" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="mikro_usb" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket16" /></td>
+
+                            </tr>
+                            </tr>
+
+                            <td><label for="nik">17. USB</label></td>
+
+                            <td align="center"><input type="radio" name="p_usb" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="p_usb" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket17" /></td>
+
+                            </tr>
+                            </tr>
+
+                            <td><label for="nik">18. Pengisi Daya</label></td>
+
+                            <td align="center"><input type="radio" name="pengisi_daya" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="pengisi_daya" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket18" /></td>
+
+                            </tr>
+
+                            <tr>
+                                <td colspan="4"><b><u>
+                                            <h4>
+                                                <font color='green'>Pesawat</font>
+                                            </h4>
+                                        </u></b></td>
+                            </tr>
+
+                            </tr>
+
+                            <td><label for="nik">19. Body Pesawat</label></td>
+
+                            <td align="center"><input type="radio" name="b_pesawat" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="b_pesawat" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket19" /></td>
+
+                            </tr>
+                            </tr>
+
+                            <td><label for="nik">20. Penyangga Pesawat</label></td>
+
+                            <td align="center"><input type="radio" name="penyangga_p" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="penyangga_p" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket20" /></td>
+
+                            </tr>
+
+                            </tr>
+
+                            <td><label for="nik">21. Internal Battery</label></td>
+
+                            <td align="center"><input type="radio" name="ib_pesawat" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="ib_pesawat" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket21" /></td>
+
+                            </tr>
+                            </tr>
+
+                            <td><label for="nik">22. Tombol Power</label></td>
+
+                            <td align="center"><input type="radio" name="tp_pesawat" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="tp_pesawat" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket22" /></td>
+
+                            </tr>
+                            </tr>
+
+                            <td><label for="nik">23. LED Battery Indicator</label></td>
+
+                            <td align="center"><input type="radio" name="battry_indicator" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="battry_indicator" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket23" /></td>
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h5 style="color: black;">Baling - Baling (Propeller):</h5>
+                                </td>
+                            </tr>
+
+                            </tr>
+
+                            <td><label for="nik">24. Mesin Props</label></td>
+
+                            <td align="center"><input type="radio" name="mesin_props" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="mesin_props" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket24" /></td>
+
+                            </tr>
+
+
+                            <td><label for="nik">25. Pengait Props</label></td>
+
+                            <td align="center"><input type="radio" name="Pengait_props" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="Pengait_props" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket25" /></td>
+
+                            </tr>
+                            </tr>
+
+                            <td><label for="nik">26. Sekrup/Baut Props</label></td>
+
+                            <td align="center"><input type="radio" name="sekrup_props" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="sekrup_props" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket26" /></td>
+
+                            </tr>
+                            </tr>
+
+                            <td><label for="nik">27. Per Baling - Baling</label></td>
+
+                            <td align="center"><input type="radio" name="per_baling_baling" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="per_baling_baling" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket27" /></td>
+
+                            </tr>
+                            </tr>
+
+                            <td><label for="nik">28. Baling - Baling (Propeller)</label></td>
+
+                            <td align="center"><input type="radio" name="baling_baling" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="baling_baling" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket28" /></td>
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h5 style="color: black;">---------------------</h5>
+                                </td>
+                            </tr>
+
+                            </tr>
+
+                            <td><label for="nik">29. Gimbal</label></td>
+
+                            <td align="center"><input type="radio" name="gimbal" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="gimbal" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket29" /></td>
+
+                            </tr>
+                            <td><label for="nik">30. Kabel Gimbal</label></td>
+
+                            <td align="center"><input type="radio" name="kbl_gimbal" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="kbl_gimbal" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket30" /></td>
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h5 style="color: black;">Kamera:</h5>
+                                </td>
+                            </tr>
+
+                            </tr>
+                            <td><label for="nik">31. Lensa</label></td>
+
+                            <td align="center"><input type="radio" name="kbl_gimbal" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="kbl_gimbal" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket31" /></td>
+
+                            </tr>
+                            </tr>
+                            <td><label for="nik">32. Pelindung Kamera</label></td>
+
+                            <td align="center"><input type="radio" name="pld_kamera" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="pld_kamera" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket32" /></td>
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h5 style="color: black;">Port:</h5>
+                                </td>
+                            </tr>
+
+                            </tr>
+                            <td><label for="nik">32. Mikro USB</label></td>
+
+                            <td align="center"><input type="radio" name="mikro_usb_pesawat" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="mikro_usb_pesawat" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket32" /></td>
+
+                            </tr>
+                            </tr>
+                            <td><label for="nik">33. Memory Card</label></td>
+
+                            <td align="center"><input type="radio" name="memory_pesawat" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="memory_pesawat" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket33" /></td>
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h5 style="color: black;">----------------------</h5>
+                                </td>
+                            </tr>
+
+                            </tr>
+                            <td><label for="nik">33. Charger Internal Battery</label></td>
+
+                            <td align="center"><input type="radio" name="charger_pesawat" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="charger_pesawat" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket33" /></td>
+
+                            </tr>
+
+                            <tr>
+                                <td colspan="4"><b><u>
+                                            <h4>
+                                                <font color='green'>Tab / Layar</font>
+                                            </h4>
+                                        </u></b></td>
+                            </tr>
+
+                            </tr>
+                            <td><label for="nik">34. Layar Display</label></td>
+
+                            <td align="center"><input type="radio" name="layar_display" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="layar_display" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket33" /></td>
+
+                            </tr>
+                            </tr>
+                            <td><label for="nik">35. Charger Tab</label></td>
+
+                            <td align="center"><input type="radio" name="charger_tab" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="charger_tab" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket35" /></td>
+
+                            </tr>
+                            </tr>
+                            <td><label for="nik">36. Program Aplikasi DJI GO</label></td>
+
+                            <td align="center"><input type="radio" name="dji_go" value="Layak " required /></td>
+
+                            <td align="center"><input type="radio" name="dji_go" value="Tidak Layak / " /></td>
+
+                            <td align="center"><input class="form-control" type="text" name="ket36" /></td>
+
+                            </tr>
+
+
+                        </table>
+
+                        <!-- end of table -->
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="nik">Catatan</label>
+
+                        <input class="form-control" type="text" name="catatan" placeholder="Jawaban Anda" />
+
+                    </div>
+
+                    <input type="submit" class="btn btn-success btn-block alert_notif" name="sub" value="Kirim" />
+
+                    <br><br><br><br><br>
+
+                </form>
+
             </div>
+
         </div>
+
     </div>
 
 </div>
