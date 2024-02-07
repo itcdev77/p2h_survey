@@ -54,10 +54,10 @@
             </a>
             <div id="report" class="collapse <?= isset($report) ? 'show' : ''; ?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item <?= isset($total_station) ? 'active' : ''; ?>" href="?trnsk_berhasil">Report Total Station</a>
-                    <a class="collapse-item <?= isset($drone) ? 'active' : ''; ?>" href="?drone">Report Drone</a>
-                    <a class="collapse-item <?= isset($drone_rtk) ? 'active' : ''; ?>" href="?drone_rtk">Report Drone RTK</a>
-                    <a class="collapse-item <?= isset($gps) ? 'active' : ''; ?>" href="?gps">GPS Geodetic</a>
+                    <a class="collapse-item <?= isset($r_total_station) ? 'active' : ''; ?>" href="?r_total_station">Report Total Station</a>
+                    <a class="collapse-item <?= isset($r_drone) ? 'active' : ''; ?>" href="?r_drone">Report Drone</a>
+                    <a class="collapse-item <?= isset($r_drone_rtk) ? 'active' : ''; ?>" href="?r_drone_rtk">Report Drone RTK</a>
+                    <a class="collapse-item <?= isset($r_gps) ? 'active' : ''; ?>" href="?r_gps">Report GPS Geodetic</a>
                 </div>
             </div>
         </li>

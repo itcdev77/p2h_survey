@@ -97,9 +97,18 @@ else if (isset($_GET['trnsk_berhasil'])) {
 // 
 
 // Log report P2H...
-else if (isset($_GET['trnsk_berhasil'])) {
-    $report = $trnsk_berhasil = true;
-    $views = 'views/report/trnsk_berhasil.php';
+else if (isset($_GET['r_drone'])) {
+    $report = $r_drone = true;
+    $views = 'views/report/r_drone.php';
+} else if (isset($_GET['r_drone_rtk'])) {
+    $report = $r_drone_rtk = true;
+    $views = 'views/report/r_drone_rtk.php';
+} else if (isset($_GET['r_total_station'])) {
+    $report = $r_total_station = true;
+    $views = 'views/report/r_total_station.php';
+} else if (isset($_GET['r_gps'])) {
+    $report = $r_gps = true;
+    $views = 'views/report/r_gps.php';
 }
 // 
 
