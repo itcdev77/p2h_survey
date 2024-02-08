@@ -8,8 +8,67 @@
             // kosong
         } else {
             $('#detailModal .modal-title').html('Detail Transaksi Stok');
+
+            // Detail awal..
+            $('[name="nama"]').val("");
+            $('[name="tanggal"]').val("");
+            $('[name="lokasi_kerja"]').val("");
+            $('[name="pilih_total_station"]').val("");
+            $('[name="no_seri"]').val("");
+            $('[name="j_kalibrasi"]').val("");
+
+            // titik yang ada keteranganya
+            $('[name="box_alat"]').val("");
+            $('[name="internal_battery"]').val("");
+            $('[name="charger_battery"]').val("");
+            $('[name="sumbuh_vertikal"]').val("");
+            $('[name="sumbuh_horizontal"]').val("");
+            $('[name="lensa_obyektif"]').val("");
+            $('[name="lensa_okuler"]').val("");
+            $('[name="p_fokus"]').val("");
+            $('[name="c_v&h"]').val("");
+            $('[name="ph_v&h"]').val("");
+            $('[name="sc_lensa"]').val("");
+            $('[name="sc_pf"]').val("");
+            $('[name="nt_pl"]').val("");
+            $('[name="nb_cl"]').val("");
+            $('[name="s_abc"]').val("");
+            $('[name="t_keypad"]').val("");
+            $('[name="laser"]').val("");
+            $('[name="m_roll"]').val("");
+            $('[name="t_statif"]').val("");
+            $('[name="t_aps"]').val("");
+            $('[name="stick_pogo"]').val("");
+            $('[name="prisma_topo"]').val("");
+
+            //catatan
+            $('[name="catatan"]').val("");
+
+            // keterangan 1 - 21
+            $('[name="ket1"]').val("");
+            $('[name="ket2"]').val("");
+            $('[name="ket3"]').val("");
+            $('[name="ket4"]').val("");
+            $('[name="ket5"]').val("");
+            $('[name="ket6"]').val("");
+            $('[name="ket7"]').val("");
+            $('[name="ket8"]').val("");
+            $('[name="ket9"]').val("");
+            $('[name="ket10"]').val("");
+            $('[name="ket11"]').val("");
+            $('[name="ket12"]').val("");
+            $('[name="ket13"]').val("");
+            $('[name="ket14"]').val("");
+            $('[name="ket15"]').val("");
+            $('[name="ket16"]').val("");
+            $('[name="ket17"]').val("");
+            $('[name="ket18"]').val("");
+            $('[name="ket19"]').val("");
+            $('[name="ket20"]').val("");
+            $('[name="ket21"]').val("");
+            $('[name="ket22"]').val("");
             $('[name="tambah"]').hide();
-            $('[name="ubah"]').show();
+            $('[name="input_gps"]').show();
 
             $.ajax({
                 type: "POST",

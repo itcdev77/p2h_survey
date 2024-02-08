@@ -4,9 +4,73 @@
 <script>
     function submit(x) {
         if (x == 'add') {
-            // kosong
+            // Detail awal..
+            $('[name="nama"]').val("");
+            $('[name="tanggal"]').val("");
+            $('[name="lokasi_kerja"]').val("");
+            $('[name="pilih_total_station"]').val("");
+            $('[name="no_seri"]').val("");
+            $('[name="j_kalibrasi"]').val("");
+
+            // titik yang ada keteranganya
+            $('[name="box_alat"]').val("");
+            $('[name="internal_battery"]').val("");
+            $('[name="charger_battery"]').val("");
+            $('[name="sumbuh_vertikal"]').val("");
+            $('[name="sumbuh_horizontal"]').val("");
+            $('[name="lensa_obyektif"]').val("");
+            $('[name="lensa_okuler"]').val("");
+            $('[name="p_fokus"]').val("");
+            $('[name="c_v&h"]').val("");
+            $('[name="ph_v&h"]').val("");
+            $('[name="sc_lensa"]').val("");
+            $('[name="sc_pf"]').val("");
+            $('[name="nt_pl"]').val("");
+            $('[name="nb_cl"]').val("");
+            $('[name="s_abc"]').val("");
+            $('[name="t_keypad"]').val("");
+            $('[name="laser"]').val("");
+            $('[name="m_roll"]').val("");
+            $('[name="t_statif"]').val("");
+            $('[name="t_aps"]').val("");
+            $('[name="stick_pogo"]').val("");
+            $('[name="prisma_topo"]').val("");
+
+            //catatan
+            $('[name="catatan"]').val("");
+
+            // keterangan 1 - 21
+            $('[name="ket1"]').val("");
+            $('[name="ket2"]').val("");
+            $('[name="ket3"]').val("");
+            $('[name="ket4"]').val("");
+            $('[name="ket5"]').val("");
+            $('[name="ket6"]').val("");
+            $('[name="ket7"]').val("");
+            $('[name="ket8"]').val("");
+            $('[name="ket9"]').val("");
+            $('[name="ket10"]').val("");
+            $('[name="ket11"]').val("");
+            $('[name="ket12"]').val("");
+            $('[name="ket13"]').val("");
+            $('[name="ket14"]').val("");
+            $('[name="ket15"]').val("");
+            $('[name="ket16"]').val("");
+            $('[name="ket17"]').val("");
+            $('[name="ket18"]').val("");
+            $('[name="ket19"]').val("");
+            $('[name="ket20"]').val("");
+            $('[name="ket21"]').val("");
+            $('[name="ket22"]').val("");
+
+            // $('#barangModal .modal-title').html('Tambah Barang');
+            $('[name="ubah"]').hide();
+            $('[name="input_total_station"]').show();
         } else {
             $('#detailModal .modal-title').html('Detail Transaksi Price Per Unit');
+
+
+
             $('[name="tambah"]').hide();
             $('[name="ubah"]').show();
 
@@ -61,13 +125,13 @@
 
                 <p>Sebuku Coal Group (Pemeliharaan dan Pemeriksaan Harian)</p>
 
-                <form class="formcoba" action="" method="POST" enctype="multipart/form-data">
+                <form class="formcoba" action="<?= base_url(); ?>process/act_p2h.php" method="POST" enctype="multipart/form-data">
 
                     <div class="form-group">
 
                         <label for="text">Nama<font color="Red">*</font></label>
 
-                        <input class="form-control" type="text" name="nama" value="" readonly required />
+                        <input class="form-control" type="text" name="nama" value="" required />
 
                     </div>
 
@@ -353,46 +417,46 @@
 
                             <tr>
 
-                                <td><label for="nik">14. Sekrup ABC</label></td>
+                                <td><label for="nik">15. Sekrup ABC</label></td>
 
                                 <td align="center"><input type="radio" name="s_abc" value="Layak " required /></td>
 
                                 <td align="center"><input type="radio" name="s_abc" value="Tidak Layak / " /></td>
-
-                                <td align="center"><input class="form-control" type="text" name="ket14" /></td>
-
-                            </tr>
-                            <tr>
-
-                                <td><label for="nik">15. Tombol - Tombol Keypad</label></td>
-
-                                <td align="center"><input type="radio" name="t_keypad" value="Layak " required /></td>
-
-                                <td align="center"><input type="radio" name="t_keypad" value="Tidak Layak / " /></td>
 
                                 <td align="center"><input class="form-control" type="text" name="ket15" /></td>
 
                             </tr>
                             <tr>
 
-                                <td><label for="nik">16. Laser</label></td>
+                                <td><label for="nik">16. Tombol - Tombol Keypad</label></td>
 
-                                <td align="center"><input type="radio" name="laser" value="Layak " required /></td>
+                                <td align="center"><input type="radio" name="t_keypad" value="Layak " required /></td>
 
-                                <td align="center"><input type="radio" name="laser" value="Tidak Layak / " /></td>
+                                <td align="center"><input type="radio" name="t_keypad" value="Tidak Layak / " /></td>
 
                                 <td align="center"><input class="form-control" type="text" name="ket16" /></td>
 
                             </tr>
                             <tr>
 
-                                <td><label for="nik">17. Meteran Roll</label></td>
+                                <td><label for="nik">17. Laser</label></td>
+
+                                <td align="center"><input type="radio" name="laser" value="Layak " required /></td>
+
+                                <td align="center"><input type="radio" name="laser" value="Tidak Layak / " /></td>
+
+                                <td align="center"><input class="form-control" type="text" name="ket17" /></td>
+
+                            </tr>
+                            <tr>
+
+                                <td><label for="nik">18. Meteran Roll</label></td>
 
                                 <td align="center"><input type="radio" name="m_roll" value="Layak " required /></td>
 
                                 <td align="center"><input type="radio" name="m_roll" value="Tidak Layak / " /></td>
 
-                                <td align="center"><input class="form-control" type="text" name="ket17" /></td>
+                                <td align="center"><input class="form-control" type="text" name="ket18" /></td>
 
                             </tr>
 
@@ -404,47 +468,47 @@
 
                             <tr>
                                 <td style="color: green;">
-                                    <label for="nik"><b>18. Tipod(Statif)</b></label>
+                                    <label for="nik"><b>19. Tipod(Statif)</b></label>
                                 </td>
 
                                 <td align="center"><input type="radio" name="t_statif" value="Layak " required /></td>
 
                                 <td align="center"><input type="radio" name="t_statif" value="Tidak Layak / " /></td>
 
-                                <td align="center"><input class="form-control" type="text" name="ket18" /></td>
+                                <td align="center"><input class="form-control" type="text" name="ket19" /></td>
                             </tr>
                             <tr>
                                 <td style="color: green;">
-                                    <label for="nik"><b>19. Tribrach APS</b></label>
+                                    <label for="nik"><b>20. Tribrach APS</b></label>
                                 </td>
 
                                 <td align="center"><input type="radio" name="t_aps" value="Layak " required /></td>
 
                                 <td align="center"><input type="radio" name="t_aps" value="Tidak Layak / " /></td>
 
-                                <td align="center"><input class="form-control" type="text" name="ket19" /></td>
+                                <td align="center"><input class="form-control" type="text" name="ket20" /></td>
                             </tr>
                             <tr>
                                 <td style="color: green;">
-                                    <label for="nik"><b>20. Stick (Tongkat Pogo)</b></label>
+                                    <label for="nik"><b>21. Stick (Tongkat Pogo)</b></label>
                                 </td>
 
                                 <td align="center"><input type="radio" name="stick_pogo" value="Layak " required /></td>
 
                                 <td align="center"><input type="radio" name="stick_pogo" value="Tidak Layak / " /></td>
 
-                                <td align="center"><input class="form-control" type="text" name="ket20" /></td>
+                                <td align="center"><input class="form-control" type="text" name="ket21" /></td>
                             </tr>
                             <tr>
                                 <td style="color: green;">
-                                    <label for="nik"><b>21. Prisma Topo</b></label>
+                                    <label for="nik"><b>22. Prisma Topo</b></label>
                                 </td>
 
                                 <td align="center"><input type="radio" name="prisma_topo" value="Layak " required /></td>
 
                                 <td align="center"><input type="radio" name="prisma_topo" value="Tidak Layak / " /></td>
 
-                                <td align="center"><input class="form-control" type="text" name="ket21" /></td>
+                                <td align="center"><input class="form-control" type="text" name="ket22" /></td>
                             </tr>
 
 
@@ -463,7 +527,7 @@
 
                     </div>
 
-                    <input type="submit" class="btn btn-success btn-block alert_notif" name="sub" value="Kirim" />
+                    <input type="submit" class="btn btn-success btn-block alert_notif" name="input_total_station" value="Kirim" />
 
                     <br><br><br><br><br>
 
