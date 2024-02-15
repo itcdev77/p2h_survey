@@ -163,6 +163,8 @@
 
                         <option>Total Station 02</option>
 
+                        <option>Leica</option>
+
 
                         </select>
 

@@ -13,33 +13,41 @@
             $('[name="nama"]').val("");
             $('[name="tanggal"]').val("");
             $('[name="lokasi_kerja"]').val("");
-            $('[name="pilih_total_station"]').val("");
+            $('[name="pilih_gps"]').val("");
             $('[name="no_seri"]').val("");
             $('[name="j_kalibrasi"]').val("");
 
             // titik yang ada keteranganya
-            $('[name="box_alat"]').val("");
-            $('[name="internal_battery"]').val("");
-            $('[name="charger_battery"]').val("");
-            $('[name="sumbuh_vertikal"]').val("");
-            $('[name="sumbuh_horizontal"]').val("");
-            $('[name="lensa_obyektif"]').val("");
-            $('[name="lensa_okuler"]').val("");
-            $('[name="p_fokus"]').val("");
-            $('[name="c_v&h"]').val("");
-            $('[name="ph_v&h"]').val("");
-            $('[name="sc_lensa"]').val("");
-            $('[name="sc_pf"]').val("");
-            $('[name="nt_pl"]').val("");
-            $('[name="nb_cl"]').val("");
-            $('[name="s_abc"]').val("");
-            $('[name="t_keypad"]').val("");
-            $('[name="laser"]').val("");
-            $('[name="m_roll"]').val("");
-            $('[name="t_statif"]').val("");
-            $('[name="t_aps"]').val("");
-            $('[name="stick_pogo"]').val("");
-            $('[name="prisma_topo"]').val("");
+            $('[name="b_reciever"]').val("");
+            $('[name="led_jaringan"]').val("");
+            $('[name="r_antena"]').val("");
+            $('[name="extension"]').val("");
+            $('[name="i_battery"]').val("");
+            $('[name="c_battery"]').val("");
+            $('[name="t_power"]').val("");
+            $('[name="p_battery"]').val("");
+            $('[name="t_port_usb"]').val("");
+            $('[name="p_usb"]').val("");
+            $('[name="b_slot"]').val("");
+            $('[name="t_adapter"]').val("");
+            $('[name="tmbl_adapter"]').val("");
+            $('[name="b_remote"]').val("");
+            $('[name="ld_remote"]').val("");
+            $('[name="rc_ib"]').val("");
+            $('[name="pen_remote"]').val("");
+            $('[name="tk_remote"]').val("");
+            $('[name="sf_controller"]').val("");
+            $('[name="skrp_remote"]').val("");
+            $('[name="rc_mikro_usb"]').val("");
+            $('[name="rc_usb"]').val("");
+            $('[name="rc_memory_card"]').val("");
+            $('[name="rc_charger"]').val("");
+            $('[name="tribach"]').val("");
+            $('[name="sekrup_abc"]').val("");
+            $('[name="clamp_pengunci"]').val("");
+            $('[name="tribach_adptor"]').val("");
+            $('[name="tb_nv_bulat"]').val("");
+            $('[name="stick"]').val("");
 
             //catatan
             $('[name="catatan"]').val("");
@@ -67,6 +75,15 @@
             $('[name="ket20"]').val("");
             $('[name="ket21"]').val("");
             $('[name="ket22"]').val("");
+            $('[name="ket23"]').val("");
+            $('[name="ket24"]').val("");
+            $('[name="ket25"]').val("");
+            $('[name="ket26"]').val("");
+            $('[name="ket27"]').val("");
+            $('[name="ket28"]').val("");
+            $('[name="ket29"]').val("");
+            $('[name="ket30"]').val("");
+
             $('[name="tambah"]').hide();
             $('[name="input_gps"]').show();
 
@@ -169,13 +186,13 @@
 
                 <p>Sebuku Coal Group (Pemeliharaan dan Pemeriksaan Harian)</p>
 
-                <form class="formcoba" action="" method="POST" enctype="multipart/form-data">
+                <form class="formcoba" action="<?= base_url(); ?>process/act_p2h.php" method="POST" enctype="multipart/form-data">
 
                     <div class="form-group">
 
                         <label for="text">Nama<font color="Red">*</font></label>
 
-                        <input class="form-control" type="text" name="nama" value="" readonly required />
+                        <input class="form-control" type="text" name="nama" value="" required />
 
                     </div>
 
@@ -203,9 +220,10 @@
 
                         <option disabled selected value>-Pilih-</option>
 
-                        <option>Total Station 01</option>
+                        <!-- ganti dengan nama gps!!! -->
+                        <option>GPS 01</option>
 
-                        <option>Total Station 02</option>
+                        <option>GPS 02</option>
 
 
                         </select>
@@ -652,7 +670,7 @@
 
                     </div>
 
-                    <input type="submit" class="btn btn-success btn-block alert_notif" name="sub" value="Kirim" />
+                    <input type="submit" class="btn btn-success btn-block alert_notif" name="input_gps" value="Kirim" />
 
                     <br><br><br><br><br>
 
