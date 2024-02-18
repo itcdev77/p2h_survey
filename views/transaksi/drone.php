@@ -186,7 +186,7 @@
 
                     <div class="form-group">
 
-                        <label for="text">Lokasi Kerja<font color="Red">*</font></label>
+                        <label for="text">Lokasi Kerja<font color=h"Red">*</font></label>
 
                         <input class="form-control" type="text" name="lokasi_kerja" placeholder="Jawaban Anda" required />
 

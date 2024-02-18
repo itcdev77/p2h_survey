@@ -4,7 +4,7 @@ include('../config/conn.php');
 
 if (isset($_POST['id'])) {
     $id = $_POST['id'];
-    $query = mysqli_query($con, "SELECT * FROM trnsk_prodev WHERE idbarang='$id'") or die(mysqli_error($con));
+    $query = mysqli_query($con, "SELECT * FROM drone_rtk WHERE idbarang='$id'") or die(mysqli_error($con));
     $data = mysqli_fetch_array($query);
     echo json_encode($data);
 }

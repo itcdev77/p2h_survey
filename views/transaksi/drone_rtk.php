@@ -8,8 +8,109 @@
             // kosong
         } else {
             $('#detailModal .modal-title').html('Detail Transaksi Split Budget');
+
+            // Detail awal..
+            $('[name="nama"]').val("");
+            $('[name="tanggal"]').val("");
+            $('[name="lokasi_kerja"]').val("");
+            $('[name="pilih_drone"]').val("");
+            $('[name="no_seri"]').val("");
+
+            // titik yang ada keteranganya
+            $('[name="antena_drone"]').val("");
+            $('[name="penyangga_ponsel"]').val("");
+            $('[name="tuas_kendali"]').val("");
+            $('[name="tuas_kanan"]').val("");
+            $('[name="tuas_kiri"]').val("");
+            $('[name="stts_led"]').val("");
+            $('[name="led_rth"]').val("");
+            $('[name="t_power"]').val("");
+            $('[name="t_rth"]').val("");
+            $('[name="t_perekan_vidio"]').val("");
+            $('[name="shutter"]').val("");
+            $('[name="m_penerbangan"]').val("");
+            $('[name="pmt"]').val("");
+            $('[name="p_kamera"]').val("");
+            $('[name="p_kemiringan"]').val("");
+            $('[name="mikro_usb"]').val("");
+            $('[name="p_usb"]').val("");
+            $('[name="pengisi_daya"]').val("");
+            $('[name="b_pesawat"]').val("");
+            $('[name="penyangga_p"]').val("");
+            $('[name="ib_pesawat"]').val("");
+            $('[name="tp_pesawat"]').val("");
+            $('[name="battry_indicator"]').val("");
+            $('[name="mesin_props"]').val("");
+            $('[name="Pengait_props"]').val("");
+            $('[name="sekrup_props"]').val("");
+            $('[name="per_baling_baling"]').val("");
+            $('[name="baling_baling"]').val("");
+            $('[name="gimbal"]').val("");
+            $('[name="kbl_gimbal"]').val("");
+            $('[name="k_lensa"]').val("");
+            $('[name="pld_kamera"]').val("");
+            $('[name="mikro_usb_pesawat"]').val("");
+            $('[name="memory_pesawat"]').val("");
+            $('[name="charger_pesawat"]').val("");
+            $('[name="layar_display"]').val("");
+            $('[name="charger_tab"]').val("");
+            $('[name="dji_go"]').val("");
+            $('[name="ib_reciever"]').val("");
+            $('[name="reciever_tripod"]').val("");
+            $('[name="reviever_tribach"]').val("");
+            $('[name="reviever_cb"]').val("");
+
+
+            //catatan
+            $('[name="catatan"]').val("");
+
+            // keterangan 1 - 21
+            $('[name="ket1"]').val("");
+            $('[name="ket2"]').val("");
+            $('[name="ket3"]').val("");
+            $('[name="ket4"]').val("");
+            $('[name="ket5"]').val("");
+            $('[name="ket6"]').val("");
+            $('[name="ket7"]').val("");
+            $('[name="ket8"]').val("");
+            $('[name="ket9"]').val("");
+            $('[name="ket10"]').val("");
+            $('[name="ket11"]').val("");
+            $('[name="ket12"]').val("");
+            $('[name="ket13"]').val("");
+            $('[name="ket14"]').val("");
+            $('[name="ket15"]').val("");
+            $('[name="ket16"]').val("");
+            $('[name="ket17"]').val("");
+            $('[name="ket18"]').val("");
+            $('[name="ket19"]').val("");
+            $('[name="ket20"]').val("");
+            $('[name="ket21"]').val("");
+            $('[name="ket22"]').val("");
+            $('[name="ket23"]').val("");
+            $('[name="ket24"]').val("");
+            $('[name="ket25"]').val("");
+            $('[name="ket26"]').val("");
+            $('[name="ket27"]').val("");
+            $('[name="ket28"]').val("");
+            $('[name="ket29"]').val("");
+            $('[name="ket30"]').val("");
+            $('[name="ket31"]').val("");
+            $('[name="ket32"]').val("");
+            $('[name="ket33"]').val("");
+            $('[name="ket34"]').val("");
+            $('[name="ket35"]').val("");
+            $('[name="ket36"]').val("");
+            $('[name="ket37"]').val("");
+            $('[name="ket38"]').val("");
+            $('[name="ket39"]').val("");
+            $('[name="ket40"]').val("");
+            $('[name="ket41"]').val("");
+            $('[name="ket42"]').val("");
+
+
             $('[name="tambah"]').hide();
-            $('[name="ubah"]').show();
+            $('[name="input_drone_rtk"]').show();
 
             $.ajax({
                 type: "POST",
@@ -73,13 +174,13 @@
 
                 <p>Sebuku Coal Group (Pemeliharaan dan Pemeriksaan Harian)</p>
 
-                <form class="formcoba" action="<?= base_url(); ?>process/act_prodev.php" method="POST" enctype="multipart/form-data">
+                <form class="formcoba" action="<?= base_url(); ?>process/act_p2h.php" method="POST" enctype="multipart/form-data">
 
                     <div class="form-group">
 
                         <label for="text">Nama<font color="Red">*</font></label>
 
-                        <input class="form-control" type="text" name="nama" value="" readonly required />
+                        <input class="form-control" type="text" name="nama" value="" required />
 
                     </div>
 
@@ -547,9 +648,9 @@
                             </tr>
                             <td><label for="nik">31. Lensa</label></td>
 
-                            <td align="center"><input type="radio" name="kbl_gimbal" value="Layak " required /></td>
+                            <td align="center"><input type="radio" name="k_lensa" value="Layak " required /></td>
 
-                            <td align="center"><input type="radio" name="kbl_gimbal" value="Tidak Layak / " /></td>
+                            <td align="center"><input type="radio" name="k_lensa" value="Tidak Layak / " /></td>
 
                             <td align="center"><input class="form-control" type="text" name="ket31" /></td>
 
@@ -572,23 +673,23 @@
                             </tr>
 
                             </tr>
-                            <td><label for="nik">32. Mikro USB</label></td>
+                            <td><label for="nik">33. Mikro USB</label></td>
 
                             <td align="center"><input type="radio" name="mikro_usb_pesawat" value="Layak " required /></td>
 
                             <td align="center"><input type="radio" name="mikro_usb_pesawat" value="Tidak Layak / " /></td>
 
-                            <td align="center"><input class="form-control" type="text" name="ket32" /></td>
+                            <td align="center"><input class="form-control" type="text" name="ket33" /></td>
 
                             </tr>
                             </tr>
-                            <td><label for="nik">33. Memory Card</label></td>
+                            <td><label for="nik">34. Memory Card</label></td>
 
                             <td align="center"><input type="radio" name="memory_pesawat" value="Layak " required /></td>
 
                             <td align="center"><input type="radio" name="memory_pesawat" value="Tidak Layak / " /></td>
 
-                            <td align="center"><input class="form-control" type="text" name="ket33" /></td>
+                            <td align="center"><input class="form-control" type="text" name="ket34" /></td>
 
                             </tr>
 
@@ -599,13 +700,13 @@
                             </tr>
 
                             </tr>
-                            <td><label for="nik">33. Charger Internal Battery</label></td>
+                            <td><label for="nik">35. Charger Internal Battery</label></td>
 
                             <td align="center"><input type="radio" name="charger_pesawat" value="Layak " required /></td>
 
                             <td align="center"><input type="radio" name="charger_pesawat" value="Tidak Layak / " /></td>
 
-                            <td align="center"><input class="form-control" type="text" name="ket33" /></td>
+                            <td align="center"><input class="form-control" type="text" name="ket35" /></td>
 
                             </tr>
 
@@ -618,33 +719,33 @@
                             </tr>
 
                             </tr>
-                            <td><label for="nik">34. Layar Display</label></td>
+                            <td><label for="nik">36. Layar Display</label></td>
 
                             <td align="center"><input type="radio" name="layar_display" value="Layak " required /></td>
 
                             <td align="center"><input type="radio" name="layar_display" value="Tidak Layak / " /></td>
 
-                            <td align="center"><input class="form-control" type="text" name="ket33" /></td>
+                            <td align="center"><input class="form-control" type="text" name="ket36" /></td>
 
                             </tr>
                             </tr>
-                            <td><label for="nik">35. Charger Tab</label></td>
+                            <td><label for="nik">37. Charger Tab</label></td>
 
                             <td align="center"><input type="radio" name="charger_tab" value="Layak " required /></td>
 
                             <td align="center"><input type="radio" name="charger_tab" value="Tidak Layak / " /></td>
 
-                            <td align="center"><input class="form-control" type="text" name="ket35" /></td>
+                            <td align="center"><input class="form-control" type="text" name="ket37" /></td>
 
                             </tr>
                             </tr>
-                            <td><label for="nik">36. Program Aplikasi DJI GO</label></td>
+                            <td><label for="nik">38. Program Aplikasi DJI GO</label></td>
 
                             <td align="center"><input type="radio" name="dji_go" value="Layak " required /></td>
 
                             <td align="center"><input type="radio" name="dji_go" value="Tidak Layak / " /></td>
 
-                            <td align="center"><input class="form-control" type="text" name="ket36" /></td>
+                            <td align="center"><input class="form-control" type="text" name="ket38" /></td>
 
                             </tr>
 
@@ -657,46 +758,45 @@
                             </tr>
 
                             </tr>
-                            <td><label for="nik">37. Internal Battery</label></td>
+                            <td><label for="nik">39. Internal Battery</label></td>
 
                             <td align="center"><input type="radio" name="ib_reciever" value="Layak " required /></td>
 
                             <td align="center"><input type="radio" name="ib_reciever" value="Tidak Layak / " /></td>
 
-                            <td align="center"><input class="form-control" type="text" name="ket37" /></td>
+                            <td align="center"><input class="form-control" type="text" name="ket39" /></td>
 
                             </tr>
                             </tr>
-                            <td><label for="nik">38. Tripod</label></td>
+                            <td><label for="nik">40. Tripod</label></td>
 
                             <td align="center"><input type="radio" name="reciever_tripod" value="Layak " required /></td>
 
                             <td align="center"><input type="radio" name="reciever_tripod" value="Tidak Layak / " /></td>
 
-                            <td align="center"><input class="form-control" type="text" name="ket38" /></td>
+                            <td align="center"><input class="form-control" type="text" name="ket40" /></td>
 
                             </tr>
                             </tr>
-                            <td><label for="nik">39. Tribach APS</label></td>
+                            <td><label for="nik">41. Tribach APS</label></td>
 
                             <td align="center"><input type="radio" name="reviever_tribach" value="Layak " required /></td>
 
                             <td align="center"><input type="radio" name="reviever_tribach" value="Tidak Layak / " /></td>
 
-                            <td align="center"><input class="form-control" type="text" name="ket39" /></td>
+                            <td align="center"><input class="form-control" type="text" name="ket41" /></td>
 
                             </tr>
                             </tr>
-                            <td><label for="nik">40. Charger Battry</label></td>
+                            <td><label for="nik">42. Charger Battry</label></td>
 
                             <td align="center"><input type="radio" name="reviever_cb" value="Layak " required /></td>
 
                             <td align="center"><input type="radio" name="reviever_cb" value="Tidak Layak / " /></td>
 
-                            <td align="center"><input class="form-control" type="text" name="ket40" /></td>
+                            <td align="center"><input class="form-control" type="text" name="ket42" /></td>
 
                             </tr>
-
 
                         </table>
 
@@ -712,7 +812,7 @@
 
                     </div>
 
-                    <input type="submit" class="btn btn-success btn-block alert_notif" name="sub" value="Kirim" />
+                    <input type="submit" class="btn btn-success btn-block alert_notif" name="input_drone_rtk" value="Kirim" />
 
                     <br><br><br><br><br>
 

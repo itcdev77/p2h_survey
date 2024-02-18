@@ -62,7 +62,7 @@
             </div>
         </li>
 
-        <li class="nav-item <?= isset($log_transaksi) ? 'active' : ''; ?>">
+        <!-- <li class="nav-item <?= isset($log_transaksi) ? 'active' : ''; ?>">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#log_transaksi" aria-expanded="true" aria-controls="log_transaksi">
                 <i class="fas fa-fw fa-folder"></i>
                 <span>Log P2H</span>
@@ -73,7 +73,7 @@
                     <a class="collapse-item <?= isset($trnsk_gagal) ? 'active' : ''; ?>" href="?trnsk_gagal">Log Gagal</a>
                 </div>
             </div>
-        </li>
+        </li> -->
 
 
     <?php endif; ?>
