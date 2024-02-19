@@ -681,8 +681,6 @@ if (isset($_POST['input_gps'])) {
     $ket30 = $_POST['ket30'];
     $a30 = $b30 . $ket30;
 
-
-
     $j = $_POST['catatan'];
 
     $insert = mysqli_query($con, "INSERT INTO gps_geodetic (nama,tggl,lokasi,tipe_alat,no_seri,jadwal_kalibrasi,

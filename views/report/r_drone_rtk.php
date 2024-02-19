@@ -110,7 +110,7 @@
                             <th width="100">keterangan</th>
                             <th width="100">Note Atasan</th>
 
-                            <th width="10" class="text-center">ACTION</th>
+                            <th width="10" class="text-center">ACTION/STATUS</th>
 
                             <!-- <?php if ($_SESSION['level'] == 'admin') : ?>
                             <?php endif; ?> -->
