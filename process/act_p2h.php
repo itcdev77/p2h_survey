@@ -444,7 +444,7 @@ if (isset($_POST['input_total_station'])) {
     }
 
     // }
-    header("Location:../?total_station.php");
+    header("Location:../?r_total_station");
 }
 // }
 
@@ -927,7 +927,7 @@ if (isset($_POST['input_gps'])) {
     }
 
     // }
-    header("Location:../?gps.php");
+    header("Location:../?r_gps");
 }
 // }
 
@@ -1458,7 +1458,7 @@ if (isset($_POST['input_drone'])) {
     }
 
     // }
-    header("Location:../?drone");
+    header("Location:../?r_drone");
 }
 // }
 
@@ -2017,6 +2017,6 @@ if (isset($_POST['input_drone_rtk'])) {
     }
 
     // }
-    header("Location:../?drone_rtk");
+    header("Location:../?r_drone_rtk");
 }
 // }
