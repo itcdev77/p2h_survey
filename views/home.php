@@ -106,3 +106,7 @@ $now = date('Y-m-d'); ?>
     <!-- /.container-fluid -->
 
     <!-- dashboard PRODEV -->
+
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
