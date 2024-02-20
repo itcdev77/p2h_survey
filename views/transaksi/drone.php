@@ -196,13 +196,34 @@
 
                         <label for="dep">Nama Drone<font color="Red">*</font> : </label>
 
-                        <select class="form-control" name="pilih_drone" required />
+                        <!-- <select class="form-control" name="pilih_drone" required />
 
                         <option disabled selected value>-Pilih-</option>
 
                         <option>DJI Mavic 3 Enterprise - M3E</option>
 
                         <option>Mavic 2 Pro</option>
+
+
+                        </select> -->
+
+                        </select><select class="form-control" type="text" name="pilih_drone" id="pilih_drone" required>
+                            <?php
+
+                            $sau = "SELECT * FROM aset_survey ORDER BY nama_aset ASC";
+                            $query2 = mysqli_query($con, "$sau") or die('mysql_error');
+
+                            // Loop melalui hasil query dan membuat pilihan dropdown
+                            echo '<option value="">-- Pilih Drone --</option>';
+                            while ($user_data = mysqli_fetch_array($query2)) {
+                                if ($user_data['tipe_alat'] == 'Drone') :
+                                    echo '<option value="' . $user_data['nama_aset'] . '">' . $user_data['nama_aset'] . '</option>';
+                                endif;
+                            }
+
+                            echo 'error';
+
+                            ?>
 
 
                         </select>
@@ -213,7 +234,7 @@
 
                         <label for="text">S/N Alat<font color="Red">*</font></label>
 
-                        <input class="form-control" type="text" name="no_seri" placeholder="Jawaban Anda" required />
+                        <input class="form-control" type="text" name="no_seri" id="no_seri" placeholder="Jawaban Anda" readonly required />
 
                     </div>
 

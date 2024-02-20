@@ -155,7 +155,8 @@
 
                         <label for="dep">Pilih Total Station<font color="Red">*</font> : </label>
 
-                        <select class="form-control" type="text" name="pilih_total_station" id="pilih_total_station" required>
+
+                        </select><select class="form-control" type="text" name="pilih_total_station" id="pilih_total_station" required>
                             <?php
 
                             $sau = "SELECT * FROM aset_survey ORDER BY nama_aset ASC";
@@ -172,7 +173,6 @@
                             echo 'error';
 
                             ?>
-                        </select>
 
 
                         </select>

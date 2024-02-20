@@ -216,15 +216,34 @@
 
                         <label for="dep">Pilih GPS Geodetic<font color="Red">*</font> : </label>
 
-                        <select class="form-control" name="pilih_gps" required />
+                        <!-- <select class="form-control" name="pilih_gps" required />
 
                         <option disabled selected value>-Pilih-</option>
 
-                        <!-- ganti dengan nama gps!!! -->
+                      
                         <option>GPS 01</option>
 
                         <option>GPS 02</option>
 
+
+                        </select> -->
+                        </select><select class="form-control" type="text" name="pilih_gps" id="pilih_drone" required>
+                            <?php
+
+                            $sau = "SELECT * FROM aset_survey ORDER BY nama_aset ASC";
+                            $query2 = mysqli_query($con, "$sau") or die('mysql_error');
+
+                            // Loop melalui hasil query dan membuat pilihan dropdown
+                            echo '<option value="">-- Pilih GPS Geodetik --</option>';
+                            while ($user_data = mysqli_fetch_array($query2)) {
+                                if ($user_data['tipe_alat'] == 'GPS Geodetik') :
+                                    echo '<option value="' . $user_data['nama_aset'] . '">' . $user_data['nama_aset'] . '</option>';
+                                endif;
+                            }
+
+                            echo 'error';
+
+                            ?>
 
                         </select>
 
@@ -234,7 +253,7 @@
 
                         <label for="text">S/N Alat<font color="Red">*</font></label>
 
-                        <input class="form-control" type="text" name="no_seri" placeholder="Jawaban Anda" required />
+                        <input class="form-control" type="text" name="no_seri" id="no_seri" placeholder="Jawaban Anda" required />
 
                     </div>
 

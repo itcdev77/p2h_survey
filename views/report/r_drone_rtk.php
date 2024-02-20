@@ -120,7 +120,7 @@
                     <tbody>
                         <?php
                         $n = 1;
-                        $query = mysqli_query($con, "SELECT * FROM drone_rtk  ORDER BY idbarang ASC") or die(mysqli_error($con));
+                        $query = mysqli_query($con, "SELECT * FROM drone_rtk  ORDER BY idbarang DESC") or die(mysqli_error($con));
 
                         if (mysqli_num_rows($query) > 0) {
                             while ($row = mysqli_fetch_array($query)) :

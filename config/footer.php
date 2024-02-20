@@ -122,7 +122,7 @@
 <script>
     $(document).ready(function() {
         // Menangani perubahan pada pilihan barang
-        $('#pilih_total_station').change(function() {
+        $('#pilih_drone').change(function() {
             var merekId = $(this).val(); // Mengambil nilai merek_id yang dipilih
 
             // Mengambil base URL secara dinamis
@@ -132,6 +132,65 @@
             $.ajax({
                 type: 'POST',
                 url: './views/transaksi/get_drone.php',
+                data: {
+                    merek_id: merekId
+                },
+                dataType: 'json', // Menetapkan tipe data yang diharapkan
+                success: function(response) {
+                    // Menetapkan nilai harga ke input dengan id 'split2'
+                    $('#no_seri').val(response.no_seri);
+
+                }
+            });
+        });
+    });
+</script>
+
+<!-- script untuk drone RTK -->
+
+<script>
+    $(document).ready(function() {
+        // Menangani perubahan pada pilihan barang
+        $('#pilih_drone_rtk').change(function() {
+            var merekId = $(this).val(); // Mengambil nilai merek_id yang dipilih
+
+            // Mengambil base URL secara dinamis
+            // var baseUrl = window.location.origin;
+
+            // Mengirim permintaan AJAX
+            $.ajax({
+                type: 'POST',
+                url: './views/transaksi/get_drone_rtk.php',
+                data: {
+                    merek_id: merekId
+                },
+                dataType: 'json', // Menetapkan tipe data yang diharapkan
+                success: function(response) {
+                    // Menetapkan nilai harga ke input dengan id 'split2'
+                    $('#no_seri').val(response.no_seri);
+
+                }
+            });
+        });
+    });
+</script>
+
+
+<!-- script untuk drone RTK -->
+
+<script>
+    $(document).ready(function() {
+        // Menangani perubahan pada pilihan barang
+        $('#pilih_gps').change(function() {
+            var merekId = $(this).val(); // Mengambil nilai merek_id yang dipilih
+
+            // Mengambil base URL secara dinamis
+            // var baseUrl = window.location.origin;
+
+            // Mengirim permintaan AJAX
+            $.ajax({
+                type: 'POST',
+                url: './views/transaksi/get_gps.php',
                 data: {
                     merek_id: merekId
                 },
