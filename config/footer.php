@@ -88,11 +88,12 @@
 
 <!-- SCRIPT UNTUK FUNGSI SPLIT BUDGET -->
 
-<!-- script untuk memilih barang yang akan mau di ambil budgetnya -->
+<!-- script untuk total station -->
+
 <script>
     $(document).ready(function() {
         // Menangani perubahan pada pilihan barang
-        $('#deskripsi_budget').change(function() {
+        $('#pilih_total_station').change(function() {
             var merekId = $(this).val(); // Mengambil nilai merek_id yang dipilih
 
             // Mengambil base URL secara dinamis
@@ -101,26 +102,14 @@
             // Mengirim permintaan AJAX
             $.ajax({
                 type: 'POST',
-                url: './views/master/get_budget.php',
+                url: './views/transaksi/get_total_station.php',
                 data: {
                     merek_id: merekId
                 },
                 dataType: 'json', // Menetapkan tipe data yang diharapkan
                 success: function(response) {
                     // Menetapkan nilai harga ke input dengan id 'split2'
-                    $('#price_budget').val(response.harga);
-
-                    $('#price_bgt').val(response.Dharga);
-
-                    // $('#price_budget').val(parseFloat(response.harga));
-
-
-                    // Menetapkan nilai stok ke input dengan id 'qty_test'
-                    $('#qty_test1').val(response.stok);
-
-                    $('#kode_budget').val(response.kode_budget);
-
-                    $('#price_perUnit').val(response.price_perUnit);
+                    $('#no_seri').val(response.no_seri);
 
                 }
             });
@@ -128,43 +117,35 @@
     });
 </script>
 
-<!-- script untuk barang yang akan di split -->
+<!-- script untuk drone -->
+
 <script>
     $(document).ready(function() {
         // Menangani perubahan pada pilihan barang
-        $('#split1').change(function() {
+        $('#pilih_total_station').change(function() {
             var merekId = $(this).val(); // Mengambil nilai merek_id yang dipilih
+
+            // Mengambil base URL secara dinamis
+            // var baseUrl = window.location.origin;
 
             // Mengirim permintaan AJAX
             $.ajax({
                 type: 'POST',
-                url: './views/master/get_budget2.php',
+                url: './views/transaksi/get_drone.php',
                 data: {
                     merek_id: merekId
                 },
                 dataType: 'json', // Menetapkan tipe data yang diharapkan
                 success: function(response) {
                     // Menetapkan nilai harga ke input dengan id 'split2'
-                    $('#split2').val(parseFloat(response.harga));
+                    $('#no_seri').val(response.no_seri);
 
-                    $('#bgt_price').val(response.Dharga);
-
-                    // Menetapkan nilai stok ke input dengan id 'qty_test'
-                    $('#qty_test').val(response.stok); // Assuming stok is an integer
-
-                    // Assuming kode_budget2 is a number, set its value
-                    $('#kode_budget2').val(response.kode_budget2);
-
-                    // Assuming price_perUnit2 is a number, set its value
-                    $('#price_perUnit2').val(response.price_perUnit2);
                 }
             });
         });
     });
 </script>
-<!--  -->
 
-<!-- script untuk logic split budget -->
 
 
 <script>

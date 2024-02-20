@@ -155,15 +155,24 @@
 
                         <label for="dep">Pilih Total Station<font color="Red">*</font> : </label>
 
-                        <select class="form-control" name="pilih_total_station" required />
+                        <select class="form-control" type="text" name="pilih_total_station" id="pilih_total_station" required>
+                            <?php
 
-                        <option disabled selected value>-Pilih-</option>
+                            $sau = "SELECT * FROM aset_survey ORDER BY nama_aset ASC";
+                            $query2 = mysqli_query($con, "$sau") or die('mysql_error');
 
-                        <option>Total Station 01</option>
+                            // Loop melalui hasil query dan membuat pilihan dropdown
+                            echo '<option value="">-- Pilih Total Station --</option>';
+                            while ($user_data = mysqli_fetch_array($query2)) {
+                                if ($user_data['tipe_alat'] == 'Total Station') :
+                                    echo '<option value="' . $user_data['nama_aset'] . '">' . $user_data['nama_aset'] . '</option>';
+                                endif;
+                            }
 
-                        <option>Total Station 02</option>
+                            echo 'error';
 
-                        <option>Leica</option>
+                            ?>
+                        </select>
 
 
                         </select>
@@ -174,7 +183,7 @@
 
                         <label for="text">S/N Alat<font color="Red">*</font></label>
 
-                        <input class="form-control" type="text" name="no_seri" placeholder="Jawaban Anda" required />
+                        <input class="form-control" type="text" name="no_seri" id="no_seri" placeholder="Jawaban Anda" required readonly />
 
                     </div>
 
