@@ -241,7 +241,7 @@
 
                         <label for="text">S/N Alat<font color="Red">*</font></label>
 
-                        <input class="form-control" type="text" name="no_seri" id="no_seri" placeholder="Jawaban Anda" required />
+                        <input class="form-control" type="text" name="no_seri" id="no_seri" placeholder="Jawaban Anda" readonly required />
 
                     </div>
 

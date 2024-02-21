@@ -108,5 +108,5 @@ $now = date('Y-m-d'); ?>
     <!-- dashboard PRODEV -->
 
     <div>
-        <canvas id="myChart"></canvas>
+        <canvas id="myAreaChart1"></canvas>
     </div>

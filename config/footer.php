@@ -90,38 +90,16 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
-<script>
-    const ctx = document.getElementById('myChart');
+<!-- Custom scripts for all pages-->
+<script src="core2/js/sb-admin-2.min.js"></script>
 
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-</script>
+<!-- Page level plugins -->
+<script src="core2/vendor/chart.js/Chart.min.js"></script>
+
+
+
 
 <!-- End Of Chart JS -->
-
-
-
-
-
-
-
-
 
 
 
