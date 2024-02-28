@@ -54,11 +54,12 @@
                     $('[name="pesawat_led_bt_indicator"]').val(data.pesawat_led_bt_indicator);
                     $('[name="mesin_props"]').val(data.mesin_props);
                     $('[name="Pengait_props"]').val(data.Pengait_props);
+                    $('[name="pengait_props"]').val(data.pengait_props);
                     $('[name="sekrup_props"]').val(data.sekrup_props);
                     $('[name="per_baling2"]').val(data.per_baling2);
                     $('[name="balling2"]').val(data.balling2);
                     $('[name="gimbal"]').val(data.gimbal);
-                    $('[name="kabel_gimbal"]').val(data.kbl_gimbal);
+                    $('[name="kabel_gimbal"]').val(data.kabel_gimbal);
                     $('[name="lensa"]').val(data.lensa);
                     $('[name="pelingdung_kam"]').val(data.pelingdung_kam);
                     $('[name="mikro_usb_pesawat"]').val(data.mikro_usb_pesawat);
@@ -435,7 +436,7 @@
                                                     <div class="input-group-prepend ">
                                                         <span class="input-group-text border-0">Pengait Props :</span>
                                                     </div>
-                                                    <input type="text" class="form-control border-0" name="Pengait_props" id="Pengait_props" readonly>
+                                                    <input type="text" class="form-control border-0" name="pengait_props" id="pengait_props" readonly>
                                                 </div>
                                             </li>
                                             <li class="list-group-item">
@@ -559,7 +560,7 @@
                                             <li class="list-group-item">
                                                 <div class="input-group">
                                                     <div class="input-group-prepend ">
-                                                        <span class="input-group-text border-0">Tripod :</span>
+                                                          <span class="input-group-text border-0">Tripod :</span>
                                                     </div>
                                                     <input type="text" class="form-control border-0" name="reciever_tripod" id="reciever_tripod" readonly>
                                                 </div>

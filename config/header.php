@@ -30,6 +30,15 @@
     <link rel=" stylesheet" href="../vendor/dist/css/adminlte.min.css">
 
     <style>
+
+        .input-group-text {
+            width: 200px; /* Sesuaikan lebar input sesuai kebutuhan */
+        }
+
+        .form-control {
+            flex: 1; /* Menggunakan fleksibilitas untuk membuat input sama rata */
+        }
+
         
     </style>
 

@@ -53,7 +53,7 @@
                     $('[name="pesawat_tp"]').val(data.pesawat_tp);
                     $('[name="pesawat_led_bt_indicator"]').val(data.pesawat_led_bt_indicator);
                     $('[name="mesin_props"]').val(data.mesin_props);
-                    $('[name="Pengait_props"]').val(data.Pengait_props);
+                    $('[name="pengait_props"]').val(data.pengait_props);
                     $('[name="sekrup_props"]').val(data.sekrup_props);
                     $('[name="per_baling2"]').val(data.per_baling2);
                     $('[name="balling2"]').val(data.balling2);
@@ -435,7 +435,7 @@
                                                     <div class="input-group-prepend ">
                                                         <span class="input-group-text border-0">Pengait Props :</span>
                                                     </div>
-                                                    <input type="text" class="form-control border-0" name="Pengait_props" id="Pengait_props" readonly>
+                                                    <input type="text" class="form-control border-0" name="pengait_props" id="pengait_props" readonly>
                                                 </div>
                                             </li>
                                             <li class="list-group-item">

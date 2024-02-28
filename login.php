@@ -23,9 +23,9 @@ if (isset($_POST['cek_login'])) {
                 header("Location:" . $base_url);
             } else {
                 $error = 'Password anda salah';
-            }
+          }
         } else {
-            $error = 'Username tidak terdaftar';
+            $error = 'Username Tidak Terdaftar';
         }
     }
     $_SESSION['error'] = $error;

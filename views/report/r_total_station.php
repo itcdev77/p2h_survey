@@ -32,6 +32,7 @@
                     $('[name="box_alat"]').val(data.box_alat);
                     $('[name="bt_internal"]').val(data.bt_internal);
                     $('[name="bt_charger"]').val(data.bt_charger);
+                    $('[name="extension"]').val(data.extension);
                     $('[name="vertikal"]').val(data.vertikal);
                     $('[name="horizontal"]').val(data.horizontal);
                     $('[name="obyektif"]').val(data.obyektif);
