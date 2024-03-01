@@ -10,7 +10,7 @@ if (isset($_POST['cek_login'])) {
     $password = $_POST['password'];
 
     if (empty($username) && empty($password)) {
-        $error = 'Harap isi username dan password';
+        $error = 'Harap Isi Username dan Password';
     } else {
         $user = mysqli_query($con, "SELECT * FROM users WHERE username='$username'") or die(mysqli_error($con));
         if (mysqli_num_rows($user) != 0) {
@@ -22,7 +22,7 @@ if (isset($_POST['cek_login'])) {
                 $_SESSION['level'] = $data['level'];
                 header("Location:" . $base_url);
             } else {
-                $error = 'Password anda salah';
+                $error = 'Password Yang Anda Masukan Salah';
           }
         } else {
             $error = 'Username Tidak Terdaftar';

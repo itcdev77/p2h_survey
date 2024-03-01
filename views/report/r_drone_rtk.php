@@ -20,8 +20,6 @@
                 dataType: 'json',
                 success: function(data) {
 
-                    // var formattedPrice = 'Rp. ' + data.price;
-
                     $('[name="idbarang"]').val(data.idbarang);
                     $('[name="tggl"]').val(data.tggl);
                     $('[name="nama_drone"]').val(data.nama_drone);
@@ -29,6 +27,7 @@
                     $('[name="cttn_atasan"]').val(data.cttn_atasan);
 
                     // titik yang ada keteranganya
+                    
                     $('[name="rc_antena"]').val(data.rc_antena);
                     $('[name="rc_penyangga_ponsel"]').val(data.rc_penyangga_ponsel);
                     $('[name="tk_tuas_kendali"]').val(data.tk_tuas_kendali);
@@ -128,7 +127,6 @@
 
                                 // Tambahkan kondisi untuk menentukan jenis transaksi yang ingin ditampilkan
                                 // $jenis_transaksi = "split"; // Ganti dengan "price" jika ingin menampilkan transaksi price
-
                                 // if ($row['jenis_trnsk'] == $jenis_transaksi && $row['departemen'] == $_SESSION['fullname'] || $_SESSION['level'] == 'admin' && $row['jenis_trnsk'] != 'price' && $row['jenis_trnsk'] != 'stok') :
                         ?>
                                 <tr>
@@ -148,7 +146,6 @@
 
                                         <!-- action untuk display detail transaksi -->
                                         <td class="text-center" style="color: #65B741;"><i class="fas fa-check"></i></td>
-
 
                                     <?php endif; ?>
 
@@ -630,12 +627,11 @@
                 <!-- modal body -->
                 <div class="modal-body">
 
+                    <!-- data yang di lempar agar bisa dilihat dalam email notifikasi -->
                     <input type="hidden" name="idbarang" class="form-control">
                     <input type="hidden" name="tggl" class="form-control">
                     <input type="hidden" name="nama_drone" class="form-control">
                     <input type="hidden" name="nama" class="form-control">
-                    <!-- <input type="hidden" name="trans_price2" class="form-control"> -->
-
 
                     <p class="text-center"><b>Silahkan pilih approve untuk setuju dan tolak untuk menolak P2H Drone RTK</b></p>
 
