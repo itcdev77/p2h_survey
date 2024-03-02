@@ -23,6 +23,7 @@
     <!-- Custom styles for this page -->
     <link href="<?= base_url(); ?>assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
     <!-- vendor -->
@@ -30,16 +31,15 @@
     <link rel=" stylesheet" href="../vendor/dist/css/adminlte.min.css">
 
     <style>
-
         .input-group-text {
-            width: 200px; /* Sesuaikan lebar input sesuai kebutuhan */
+            width: 200px;
+            /* Sesuaikan lebar input sesuai kebutuhan */
         }
 
         .form-control {
-            flex: 1; /* Menggunakan fleksibilitas untuk membuat input sama rata */
+            flex: 1;
+            /* Menggunakan fleksibilitas untuk membuat input sama rata */
         }
-
-        
     </style>
 
 </head>

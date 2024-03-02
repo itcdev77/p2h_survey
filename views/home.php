@@ -107,6 +107,199 @@ $now = date('Y-m-d'); ?>
 
     <!-- dashboard PRODEV -->
 
-    <div>
-        <canvas id="myAreaChart1"></canvas>
+    <!-- Area Chart -->
+
+    <center>
+        <h3 class="card-header section-title">
+            Statistik Total Station </h3>
+    </center><br>
+
+    <div class="row">
+
+        <!-- Area Chart -->
+        <div class="col-xl-8 col-lg-7">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Chart P2H Total Station Minggu Ini</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="chart-area">
+                        <canvas id="myAreaChart1"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pie Chart -->
+        <div class="col-xl-4 col-lg-5">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Statistik P2H Total Station Hari Ini</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="chart-pie pt-4 pb-2">
+                        <canvas id="myPieChart1"></canvas>
+                    </div>
+                    <div class="mt-4 text-center small">
+                        Total P2H Total Station Hari Ini :
+                        <?php
+                        $jumlah_laki = mysqli_query($con, "select * from total_station where tggl>=CURRENT_DATE();");
+                        echo mysqli_num_rows($jumlah_laki) . " Laporan";
+                        ?>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <center>
+        <h3 class="card-header section-title">
+            Statistik Drone </h3>
+    </center><br>
+
+    <div class="row">
+
+        <!-- Area Chart -->
+        <div class="col-xl-8 col-lg-7">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Chart P2H Drone Minggu Ini</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="chart-area">
+                        <canvas id="myAreaChart2"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pie Chart -->
+        <div class="col-xl-4 col-lg-5">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Statistik P2H Drone Hari Ini</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="chart-pie pt-4 pb-2">
+                        <canvas id="myPieChart2"></canvas>
+                    </div>
+                    <div class="mt-4 text-center small">
+                        Total P2H Drone Hari Ini :
+                        <?php
+                        $jumlah_laki = mysqli_query($con, "select * from drone where tggl>=CURRENT_DATE();");
+                        echo mysqli_num_rows($jumlah_laki) . " Laporan";
+                        ?>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <center>
+        <h3 class="card-header section-title">
+            Statistik Drone RTK </h3>
+    </center><br>
+
+    <div class="row">
+
+        <!-- Area Chart -->
+        <div class="col-xl-8 col-lg-7">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Chart P2H Drone RTK Minggu Ini</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="chart-area">
+                        <canvas id="myAreaChart3"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pie Chart -->
+        <div class="col-xl-4 col-lg-5">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Statistik P2H Drone RTK Hari Ini</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="chart-pie pt-4 pb-2">
+                        <canvas id="myPieChart3"></canvas>
+                    </div>
+                    <div class="mt-4 text-center small">
+                        Total P2H Drone RTK Hari Ini :
+                        <?php
+                        $jumlah_laki = mysqli_query($con, "select * from drone_rtk where tggl>=CURRENT_DATE();");
+                        echo mysqli_num_rows($jumlah_laki) . " Laporan";
+                        ?>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <center>
+        <h3 class="card-header section-title">
+            Statistik GPS Geodetik </h3>
+    </center><br>
+
+    <div class="row">
+
+        <!-- Area Chart -->
+        <div class="col-xl-8 col-lg-7">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Chart P2H GPS Geodetik Minggu Ini</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="chart-area">
+                        <canvas id="myAreaChart4"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pie Chart -->
+        <div class="col-xl-4 col-lg-5">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Statistik GPS Geodetik Hari Ini</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="chart-pie pt-4 pb-2">
+                        <canvas id="myPieChart4"></canvas>
+                    </div>
+                    <div class="mt-4 text-center small">
+                        Total P2H GPS Geodetik Hari Ini :
+                        <?php
+                        $jumlah_laki = mysqli_query($con, "select * from gps_geodetic where tggl>=CURRENT_DATE();");
+                        echo mysqli_num_rows($jumlah_laki) . " Laporan";
+                        ?>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>

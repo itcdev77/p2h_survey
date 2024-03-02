@@ -23,7 +23,7 @@ if (isset($_POST['cek_login'])) {
                 header("Location:" . $base_url);
             } else {
                 $error = 'Password Yang Anda Masukan Salah';
-          }
+            }
         } else {
             $error = 'Username Tidak Terdaftar';
         }
@@ -83,7 +83,7 @@ if (isset($_POST['cek_login'])) {
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                         <br>
                                         <center>
-                                            <p>Selamat Datang di Sistem Kontrol Budget SCG</p>
+                                            <p>Selamat Datang di Sistem P2H Survey</p>
                                         </center>
 
                                     </div>
