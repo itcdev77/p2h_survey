@@ -152,6 +152,14 @@ $now = date('Y-m-d'); ?>
                         ?>
 
                     </div>
+                    <div class="mt-4 text-center small">
+                        Approved :
+                        <?php
+                        $jumlah_laki = mysqli_query($con, "SELECT status FROM total_station WHERE status = 'approved' AND tggl >= CURRENT_DATE();;");
+                        echo mysqli_num_rows($jumlah_laki) . " Di Approved";
+                        ?>
+
+                    </div>
                 </div>
             </div>
         </div>
