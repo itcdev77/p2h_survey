@@ -16,6 +16,7 @@
             $('[name="box_alat"]').val("");
             $('[name="internal_battery"]').val("");
             $('[name="charger_battery"]').val("");
+            $('[name="extension"]').val("");
             $('[name="sumbuh_vertikal"]').val("");
             $('[name="sumbuh_horizontal"]').val("");
             $('[name="lensa_obyektif"]').val("");
@@ -258,6 +259,18 @@
                                 <td align="center"><input type="radio" name="charger_battery" value="Tidak Layak / " /></td>
 
                                 <td align="center"><input class="form-control" type="text" name="ket3" /></td>
+
+                            </tr>
+                            
+                            <tr>
+
+                                <td><label for="nik">3-B. Extension</label></td>
+
+                                <td align="center"><input type="radio" name="extension" value="Layak " required /></td>
+
+                                <td align="center"><input type="radio" name="extension" value="Tidak Layak / " /></td>
+
+                                <td align="center"><input class="form-control" type="text" name="ket3B" /></td>
 
                             </tr>
 

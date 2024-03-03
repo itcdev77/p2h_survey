@@ -110,6 +110,13 @@ else if (isset($_GET['r_drone'])) {
     $report = $r_gps = true;
     $views = 'views/report/r_gps.php';
 }
+
+else if (isset($_GET['ex_total_station'])) {
+    $report = $ex_total_station = true;
+    $views = 'views/report/ex_total_station.php';
+}
+
+
 // 
 
 else {

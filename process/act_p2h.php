@@ -58,6 +58,13 @@ if (isset($_POST['input_total_station'])) {
     $ket3 = $_POST['ket3'];
 
     $a3 = $b3 . $ket3;
+    
+    //anomali..
+    $b3b = $_POST['extension'];
+
+    $ket3B = $_POST['ket3B'];
+
+    $a3b = $b3b . $ket3b;
 
 
 
@@ -216,7 +223,7 @@ if (isset($_POST['input_total_station'])) {
 
     $insert = mysqli_query($con, "INSERT INTO total_station (nama,tggl,lokasi,tipe_alat,no_seri,wkt_kalibrasi,
     
-    box_alat,bt_internal,bt_charger,vertikal,horizontal,obyektif,okuler,pengatur_fokus,clamp_vh,penggerak_halus_vh,lensa,pengatur_fokus_sc,nivo_tabung,nivo_bulat,sekrup_abc,tombol_keypad,laser,materal_roll,tripod_statif,tribrach_aps,stick,prisma_topo,keterangan) VALUES ('$c','$e','$f','$g','$h','$i','$a1','$a2','$a3','$a4','$a5','$a6' ,'$a7','$a8','$a9','$a10','$a11','$a12','$a13','$a14','$a15'
+    box_alat,bt_internal,bt_charger,extension,vertikal,horizontal,obyektif,okuler,pengatur_fokus,clamp_vh,penggerak_halus_vh,lensa,pengatur_fokus_sc,nivo_tabung,nivo_bulat,sekrup_abc,tombol_keypad,laser,materal_roll,tripod_statif,tribrach_aps,stick,prisma_topo,keterangan) VALUES ('$c','$e','$f','$g','$h','$i','$a1','$a2','$a3','$a3b','$a4','$a5','$a6' ,'$a7','$a8','$a9','$a10','$a11','$a12','$a13','$a14','$a15'
 
     ,'$a16','$a17','$a18','$a19','$a20','$a21','$a22','$j')") or die(mysqli_error($con));
 
