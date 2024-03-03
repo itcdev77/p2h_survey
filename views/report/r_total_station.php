@@ -75,9 +75,9 @@
 
 <!-- Begin Page Content -->
 
-  <!-- Page Heading -->
-  <div class="container-fluid">
-  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+<!-- Page Heading -->
+<div class="container-fluid">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Report P2H Total Station</h1>
     </div>
 </div>
@@ -85,33 +85,39 @@
 <div class="container-fluid">
 
     <!-- DataTales Example -->
- 
-        
-            <form action="<?=base_url();?>/process/ex_total_station.php" method="post" target="_blank">
-                <div class="row">
-                    <div class="col-md-5">
-                        <div class="form-group">
-                            <label for="tanggal_awal">Tanggal Awal</label>
-                            <input type="date" name="tanggal_awal" id="tanggal_awal" class="form-control"
-                                value="<?=date('Y-m-d H:i:s');?>
+
+
+    <form action="<?= base_url(); ?>/process/ex_total_station.php" method="post" target="_blank">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="tanggal_awal">Tanggal Awal</label>
+                    <input type="date" name="tanggal_awal" id="tanggal_awal" class="form-control" value="<?= date('Y-m-d'); ?>
 ">
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="form-group">
-                            <label for="tanggal_akhir">Tanggal Akhir</label>
-                            <input type="date" name="tanggal_akhir" id="tanggal_akhir" class="form-control"
-                                value="<?=date('Y-m-d H:i:s');?>
-">
-                        </div>
-                    </div>
-                    <div class="col-md-2 p-2">
-                        <a href="<?=base_url();?>/process/ex_total_station.php" class="btn btn-primary mt-4" target="_blank" type="submit" ><i class="fas fa-print"></i> Cetak
-                            Laporan</a>
-                    </div>
                 </div>
-            </form>
-   
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="tanggal_akhir">Tanggal Akhir</label>
+                    <input type="date" name="tanggal_akhir" id="tanggal_akhir" class="form-control" value="<?= date('Y-m-d'); ?>
+">
+                </div>
+            </div>
+
+            <div class="col-ms-1 p-2">
+                <button class="btn btn-primary mt-4" type="submit" name="export"><i class="fas fa-file-export"></i>
+                    Export</button>
+
+            </div>
+
+            <div class="col-ms-1 p-2">
+                <button class="btn btn-primary mt-4" type="submit" name="export_all"><i class="fas fa-file-export"></i> Export All</button>
+            </div>
+        </div>
+    </form>
+
+
+
 
 </div>
 
@@ -120,7 +126,7 @@
 <div class="container-fluid">
 
 
-  
+
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">

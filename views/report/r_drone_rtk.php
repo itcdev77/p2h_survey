@@ -27,7 +27,7 @@
                     $('[name="cttn_atasan"]').val(data.cttn_atasan);
 
                     // titik yang ada keteranganya
-                    
+
                     $('[name="rc_antena"]').val(data.rc_antena);
                     $('[name="rc_penyangga_ponsel"]').val(data.rc_penyangga_ponsel);
                     $('[name="tk_tuas_kendali"]').val(data.tk_tuas_kendali);
@@ -85,12 +85,55 @@
 
 
 <!-- Begin Page Content -->
+<!-- Page Heading -->
+<div class="container-fluid">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Report P2H Drone RTK</h1>
+    </div>
+</div>
+
 <div class="container-fluid">
 
-    <!-- Page Heading -->
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Report P2H Drone RTK <?= strtoupper($_SESSION['fullname']); ?></h1>
-    </div>
+    <!-- DataTales Example -->
+
+
+    <form action="<?= base_url(); ?>/process/ex_total_station.php" method="post" target="_blank">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="tanggal_awal">Tanggal Awal</label>
+                    <input type="date" name="tanggal_awal" id="tanggal_awal" class="form-control" value="<?= date('Y-m-d'); ?>
+">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="tanggal_akhir">Tanggal Akhir</label>
+                    <input type="date" name="tanggal_akhir" id="tanggal_akhir" class="form-control" value="<?= date('Y-m-d'); ?>
+">
+                </div>
+            </div>
+
+            <div class="col-ms-1 p-2">
+                <button class="btn btn-primary mt-4" type="submit" name="export"><i class="fas fa-file-export"></i>
+                    Export</button>
+
+            </div>
+
+            <div class="col-ms-1 p-2">
+                <button class="btn btn-primary mt-4" type="submit" name="export_all"><i class="fas fa-file-export"></i> Export All</button>
+            </div>
+        </div>
+    </form>
+
+
+
+
+</div>
+
+<div class="container-fluid">
+
+
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -557,7 +600,7 @@
                                             <li class="list-group-item">
                                                 <div class="input-group">
                                                     <div class="input-group-prepend ">
-                                                          <span class="input-group-text border-0">Tripod :</span>
+                                                        <span class="input-group-text border-0">Tripod :</span>
                                                     </div>
                                                     <input type="text" class="form-control border-0" name="reciever_tripod" id="reciever_tripod" readonly>
                                                 </div>
