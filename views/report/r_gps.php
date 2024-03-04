@@ -87,7 +87,7 @@
     <!-- DataTales Example -->
 
 
-    <form action="<?= base_url(); ?>/process/ex_total_station.php" method="post" target="_blank">
+    <form action="<?= base_url(); ?>/process/ex_gps.php" method="post" target="_blank">
         <div class="row">
             <div class="col-md-2">
                 <div class="form-group">

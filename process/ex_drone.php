@@ -16,7 +16,7 @@ include('../config/function.php');
 <body class="bg-light">
     <?php
     header("Content-type: application/vnd-ms-excel");
-    header("Content-Disposition: attachment; filename=Data p2h " . date("d-m-Y") . ".xls");
+    header("Content-Disposition: attachment; filename=Data p2h-drone " . date("d-m-Y") . ".xls");
     ?>
     <?php
     // $s="select*from users where id='$_SESSION[iduser]'";
@@ -29,7 +29,7 @@ include('../config/function.php');
     <div class="container mt-5">
         <div class="row">
             <div>
-                <h4>Laporan Kartu P2H Total Station Survey</h4>
+                <h4>Laporan Kartu P2H Drone Survey</h4>
                 Sebuku Coal Group (Pemeliharaan dan Pemeriksaan Harian)
                 <br>
                 <table class="table table-bordered">
@@ -40,33 +40,49 @@ include('../config/function.php');
                         <th>Lokasi Kerja</th>
                         <th>Nama Unit</th>
                         <th>No Seri Alat</th>
-                        <th>Jadwal Kalibrasi</th>
                         <th>Note Atasan</th>
                         <th>Status</th>
                         <th>Keterangan</th>
-                        <th>Box Alat</th>
+
+                        <th>Antena</th>
+                        <th>Penyanggan Ponsel</th>
+                        <th>Tuas Kendali</th>
+                        <th>Tuas Kanan</th>
+                        <th>Tuas Kiri</th>
+                        <th>Status LED & Daya Baterai</th>
+                        <th>LED Rturn to Home (RTH)</th>
+                        <th>Power</th>
+                        <th>Rerutn to Home (RTH) </th>
+                        <th>Prekam Vidio</th>
+                        <th>Shutter/Pengambil Foto</th>
+                        <th>Mode Penerbangan</th>
+                        <th>Penghenti Mode Terbang</th>
+                        <th>Pengaturan Kamera</th>
+                        <th>Pengaturan Kemiringan</th>
+                        <th>Mikro USB</th>
+                        <th>USB</th>
+                        <th>Pengisi Daya</th>
+                        <th>Body Pesawat</th>
+                        <th>Penyangga Pesawat</th>
                         <th>Internal Battery</th>
-                        <th>Charger Battery</th>
-                        <th>Extension</th>
-                        <th>Vertikal</th>
-                        <th>Horizontal</th>
-                        <th>Obyektif</th>
-                        <th>Okuler</th>
-                        <th>Pengatur Fokus</th>
-                        <th>Clamp Vert & Horiz</th>
-                        <th>Penggerak Halus Vert & Horiz</th>
+                        <th>Tombol Power</th>
+                        <th>LED Battery Indicator</th>
+                        <th>Mesin Props</th>
+                        <th>Pengait Props</th>
+                        <th>Sekrup/Baut Props</th>
+                        <th>Per Baling - Baling</th>
+                        <th>Baling - Baling (Propeller)</th>
+                        <th>Gimbal</th>
+                        <th>Kabel Gimbal</th>
                         <th>Lensa</th>
-                        <th>Pengatur Fokus FC</th>
-                        <th>Nivo Tabung (Plate Level)</th>
-                        <th>Nivo Bulat (Circular Level)</th>
-                        <th>Sekrup ABC</th>
-                        <th>Tombol - Tombol Keypad</th>
-                        <th>Laser</th>
-                        <th>Meteran Roll</th>
-                        <th>Tripod (Statif)</th>
-                        <th>Tribrach APS</th>
-                        <th>Stick (Tongkat Pogo)</th>
-                        <th>Prisma Topo</th>
+                        <th>Pelindung Kamera</th>
+                        <th>Mikro USB</th>
+                        <th>Memory Card</th>
+                        <th>Charger Internal Battery</th>
+                        <th>Layar Display</th>
+                        <th>Charger Tab</th>
+                        <th>Program Aplikasi DJI GO</th>
+
 
 
                     </tr>
@@ -81,7 +97,7 @@ include('../config/function.php');
                     // kondisi untuk export all data total_station
                     if (isset($_POST['export_all'])) {
 
-                        $sau = "SELECT * FROM total_station ORDER BY tggl DESC";
+                        $sau = "SELECT * FROM drone ORDER BY tggl DESC";
                     }
 
                     // kondisi untuk export data berdasarkan tanggal yang di pilih
@@ -89,7 +105,7 @@ include('../config/function.php');
 
                         $tgl_awal = $_POST['tanggal_awal'];
                         $tgl_akhir = $_POST['tanggal_akhir'];
-                        $sau = "SELECT * FROM total_station WHERE tggl BETWEEN '$tgl_awal' AND '$tgl_akhir' ORDER BY tggl DESC";
+                        $sau = "SELECT * FROM drone WHERE tggl BETWEEN '$tgl_awal' AND '$tgl_akhir' ORDER BY tggl DESC";
                     }
 
                     $qua = mysqli_query($con, $sau);
@@ -102,36 +118,52 @@ include('../config/function.php');
                         echo "<td>" . $user_data['idbarang'] . "</td>";
                         echo "<td>" . $user_data['nama'] . "</td>";
                         echo "<td>" . $user_data['tggl'] . "</td>";
-                        echo "<td>" . $user_data['lokasi'] . "</td>";
-                        echo "<td>" . $user_data['tipe_alat'] . "</td>";
-                        echo "<td>" . $user_data['no_seri'] . "</td>";
-                        echo "<td>" . $user_data['wkt_kalibrasi'] . "</td>";
+                        echo "<td>" . $user_data['lokasi_kerja'] . "</td>";
+                        echo "<td>" . $user_data['nama_drone'] . "</td>";
+                        echo "<td>" . $user_data['sn_alat'] . "</td>";
                         echo "<td>" . $user_data['cttn_atasan'] . "</td>";
                         echo "<td>" . $user_data['status'] . "</td>";
                         echo "<td>" . $user_data['keterangan'] . "</td>";
-                        echo "<td>" . $user_data['box_alat'] . "</td>";
-                        echo "<td>" . $user_data['bt_internal'] . "</td>";
-                        echo "<td>" . $user_data['bt_charger'] . "</td>";
-                        echo "<td>" . $user_data['extension'] . "</td>";
-                        echo "<td>" . $user_data['vertikal'] . "</td>";
-                        echo "<td>" . $user_data['horizontal'] . "</td>";
-                        echo "<td>" . $user_data['obyektif'] . "</td>";
-                        echo "<td>" . $user_data['okuler'] . "</td>";
-                        echo "<td>" . $user_data['pengatur_fokus'] . "</td>";
-                        echo "<td>" . $user_data['clamp_vh'] . "</td>";
-                        echo "<td>" . $user_data['penggerak_halus_vh'] . "</td>";
+
+                        echo "<td>" . $user_data['rc_antena'] . "</td>";
+                        echo "<td>" . $user_data['rc_penyangga_ponsel'] . "</td>";
+                        echo "<td>" . $user_data['tk_tuas_kendali'] . "</td>";
+                        echo "<td>" . $user_data['tk_tuas_kanan'] . "</td>";
+                        echo "<td>" . $user_data['tk_tuas_kiri'] . "</td>";
+                        echo "<td>" . $user_data['stts_led_daya_bt'] . "</td>";
+                        echo "<td>" . $user_data['led_rth'] . "</td>";
+                        echo "<td>" . $user_data['t_power'] . "</td>";
+                        echo "<td>" . $user_data['t_rth'] . "</td>";
+                        echo "<td>" . $user_data['perekam_vidio'] . "</td>";
+                        echo "<td>" . $user_data['t_shutter'] . "</td>";
+                        echo "<td>" . $user_data['t_mode_terbang'] . "</td>";
+                        echo "<td>" . $user_data['t_stop_mt'] . "</td>";
+                        echo "<td>" . $user_data['pengaturan_kamera'] . "</td>";
+                        echo "<td>" . $user_data['p_kemiringan'] . "</td>";
+                        echo "<td>" . $user_data['port_mikro_usb'] . "</td>";
+                        echo "<td>" . $user_data['p_usb'] . "</td>";
+                        echo "<td>" . $user_data['pengisi_daya'] . "</td>";
+                        echo "<td>" . $user_data['body_pesawat'] . "</td>";
+                        echo "<td>" . $user_data['penyangga_pesawat'] . "</td>";
+                        echo "<td>" . $user_data['pesawat_ib'] . "</td>";
+                        echo "<td>" . $user_data['pesawat_tp'] . "</td>";
+                        echo "<td>" . $user_data['pesawat_led_bt_indicator'] . "</td>";
+                        echo "<td>" . $user_data['mesin_props'] . "</td>";
+                        echo "<td>" . $user_data['pengait_props'] . "</td>";
+                        echo "<td>" . $user_data['sekrup_props'] . "</td>";
+                        echo "<td>" . $user_data['per_baling2'] . "</td>";
+                        echo "<td>" . $user_data['balling2'] . "</td>";
+                        echo "<td>" . $user_data['gimbal'] . "</td>";
+                        echo "<td>" . $user_data['kabel_gimbal'] . "</td>";
                         echo "<td>" . $user_data['lensa'] . "</td>";
-                        echo "<td>" . $user_data['pengatur_fokus_sc'] . "</td>";
-                        echo "<td>" . $user_data['nivo_tabung'] . "</td>";
-                        echo "<td>" . $user_data['nivo_bulat'] . "</td>";
-                        echo "<td>" . $user_data['sekrup_abc'] . "</td>";
-                        echo "<td>" . $user_data['tombol_keypad'] . "</td>";
-                        echo "<td>" . $user_data['laser'] . "</td>";
-                        echo "<td>" . $user_data['materal_roll'] . "</td>";
-                        echo "<td>" . $user_data['tripod_statif'] . "</td>";
-                        echo "<td>" . $user_data['tribrach_aps'] . "</td>";
-                        echo "<td>" . $user_data['stick'] . "</td>";
-                        echo "<td>" . $user_data['prisma_topo'] . "</td>";
+                        echo "<td>" . $user_data['pelingdung_kam'] . "</td>";
+                        echo "<td>" . $user_data['mikro_usb_pesawat'] . "</td>";
+                        echo "<td>" . $user_data['memory_card_pesawat'] . "</td>";
+                        echo "<td>" . $user_data['ci_battery_pesawat'] . "</td>";
+                        echo "<td>" . $user_data['layar_display'] . "</td>";
+                        echo "<td>" . $user_data['charger_tab'] . "</td>";
+                        echo "<td>" . $user_data['dji_go'] . "</td>";
+
 
                         echo "</tr>";
                     }
